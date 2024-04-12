@@ -7,11 +7,10 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Felix Pachowsky',
     'author_email' => 'f.pachowsky@googlemail.com',
     'author_company' => '',
-    'version' => '0.1.0',
+    'version' => '0.1.1',
     'constraints' => [
         'depends' => [
-            'php' => '8.2-',
-            'typo3' => '13.0-',
+            'typo3' => '13.1.0-13.4.99',
         ],
         'conflicts' => [
         ],
