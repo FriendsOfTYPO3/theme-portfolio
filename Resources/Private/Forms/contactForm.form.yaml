@@ -1,0 +1,131 @@
+
+renderingOptions:
+  submitButtonLabel: Submit
+  honeypot:
+    enable: true
+    formElementToUse: Honeypot
+type: Form
+identifier: contactForm
+label: 'Contact Form'
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: 'Message from Contact Form'
+      recipients:
+        foo@bar.de: 'Foo Bar'
+      senderAddress: bar@foo.de
+      senderName: ''
+      addHtmlPart: true
+      attachUploads: true
+      translation:
+        language: Default
+      title: ''
+    identifier: EmailToReceiver
+  -
+    options:
+      pageUid: '12'
+      additionalParameters: ''
+      fragment: ''
+    identifier: Redirect
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: page-1
+    label: Step
+    renderables:
+      -
+        type: GridRow
+        identifier: gridrow-1
+        label: 'Grid: Row'
+        renderables:
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-1
+            label: Name
+            properties:
+              elementDescription: ''
+              fluidAdditionalAttributes:
+                required: required
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xs:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  xl:
+                    numbersOfColumnsToUse: '6'
+                  xxl:
+                    numbersOfColumnsToUse: '6'
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-2
+            label: Email
+            properties:
+              fluidAdditionalAttributes:
+                required: required
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xs:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  xl:
+                    numbersOfColumnsToUse: '6'
+                  xxl:
+                    numbersOfColumnsToUse: '6'
+            validators:
+              -
+                identifier: NotEmpty
+              -
+                identifier: EmailAddress
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-3
+        label: Subject
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Textarea
+        identifier: textarea-1
+        label: Message
+        properties:
+          elementDescription: ''
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        type: Checkbox
+        identifier: checkbox-1
+        label: 'Privacy Policy'
+        properties:
+          elementDescription: 'I accept the privacy policy'
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty

@@ -1,0 +1,34 @@
+tt_content.client_logos =< lib.contentElement
+tt_content.client_logos {
+    templateName = ClientLogos
+
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        10 {
+            table = tx_portfolio_client_logo
+            pidInList {
+                field = parent
+            }
+            where = (parent=###uid### AND deleted=0 AND hidden=0)
+            orderBy = sorting
+            as = client_logos
+            markers {
+                uid {
+                    field = uid
+                }
+            }
+
+            dataProcessing {
+                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                10 {
+                    references {
+                        table = tx_portfolio_client_logo
+                        fieldName = image
+                    }
+                    as = images
+                }
+            }
+        }
+    }
+}
+

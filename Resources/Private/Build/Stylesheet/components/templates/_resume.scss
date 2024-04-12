@@ -1,0 +1,21 @@
+.ce-resume {
+    &__header {
+        margin-bottom: $size-32;
+    }
+
+    .container {
+        > .row {
+            margin-bottom: calc(-1 * var(--spacer-lg));
+
+            > .col {
+                margin-bottom: var(--spacer-lg);
+            }
+        }
+    }
+
+    @include breakpoint-up(md) {
+        &__header {
+            margin-bottom: $size-48;
+        }
+    }
+}

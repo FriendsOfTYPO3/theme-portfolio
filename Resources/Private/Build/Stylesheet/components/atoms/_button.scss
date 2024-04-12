@@ -1,0 +1,63 @@
+@use "sass:color";
+
+.button.button {
+    $component: &;
+
+    --text-color: var(--color-button-text);
+    --button-bg-color: var(--color-primary);
+    --button-hover-bg-color: var(--color-secondary);
+    --font-size: #{$font-18};
+    --padding: #{$size-8} #{$size-16};
+    --radius: var(--button-border-radius);
+
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    padding: var(--padding);
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+    font-size: var(--font-size);
+    font-weight: $font-bold;
+    transition: all $transition-timing-fast linear;
+    border-radius: var(--radius);
+    text-decoration: none;
+    text-shadow: 0 0 6px rgba(0,0,0,.15);
+
+    @include interaction {
+        background-color: var(--button-hover-bg-color);
+    }
+
+    &--secondary {
+        --button-bg-color: var(--color-secondary);
+        --button-hover-bg-color: var(--color-primary);
+    }
+
+    &--small {
+        --padding: #{$size-4} #{$size-12};
+        --font-size: #{$font-16};
+    }
+
+    .button-radius {
+        &--none & {
+            --button-border-radius: 0;
+        }
+
+        &--rounded & {
+            --button-border-radius: #{$size-4};
+        }
+
+        &--round & {
+            --button-border-radius: #{$size-48};
+        }
+    }
+
+    @include breakpoint-up(md) {
+        --padding: #{$size-12} #{$size-48};
+        --font-size: #{$font-24};
+
+        &--small {
+            --padding: #{$size-4} #{$size-16};
+            --font-size: #{$font-16};
+        }
+    }
+}

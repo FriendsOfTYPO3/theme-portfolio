@@ -1,0 +1,79 @@
+/* ====  Base style ==== */
+
+html {
+  box-sizing: border-box;
+  font-size: $font-size-root;
+  font-weight: $font-regular;
+  height: 100%;
+  width: 100%;
+  line-height: $line-height-base;
+  scroll-behavior: smooth;
+  scroll-padding-top: $scroll-padding-top;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  color: var(--color-base-text);
+  font-size: $base-text-size;
+  font-family: var(--font-family-copytext);
+  font-weight: $font-regular;
+  background-color: var(--color-base-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-top: 5.5rem;
+
+  &.mobile-menu-shown {
+    overflow: hidden;
+  }
+}
+
+::selection {
+  color: $selection-text-color;
+  background: $selection-background-color;
+}
+
+.main {
+  position: relative;
+  overflow: hidden;
+
+  picture {
+    display: block;
+  }
+
+  video {
+    width: 100%;
+    height: auto;
+  }
+
+  figcaption,
+  small, .small {
+    display: inline-block;
+    font-size: $font-14;
+    margin-top: $size-12;
+    color: var(--color-base-text-secondary);
+    line-height: 1.25;
+
+    @include breakpoint-up(md) {
+      margin-top: $size-16;
+    }
+  }
+}
+
+section,
+.section {
+  position: relative;
+  z-index: 0;
+  padding-top: var(--spacer-lg);
+  padding-bottom: var(--spacer-lg);
+}

@@ -1,0 +1,108 @@
+// Headline Variables
+@mixin h1() {
+    font-size: var(--font-size-h1);
+    font-weight: $font-regular;
+    line-height: 1.35;
+
+}
+
+h1,
+.h1.h1 {
+    @include h1;
+}
+
+@mixin h2() {
+    font-size: var(--font-size-h2);
+    font-weight: $font-regular;
+    line-height: 1.35;
+}
+
+h2,
+.h2.h2 {
+    @include h2;
+}
+
+@mixin h3() {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-h3);
+    font-weight: $font-regular;
+    line-height: 1.35;
+}
+
+h3,
+.h3.h3 {
+    @include h3;
+}
+
+@mixin h4() {
+    font-size: var(--font-size-h4);
+    font-weight: $font-regular;
+    line-height: 1.35;
+}
+
+h4,
+.h4.h4 {
+    @include h4;
+}
+
+@mixin h5() {
+    font-size: var(--font-size-h5);
+    font-weight: $font-regular;
+    line-height: 1.35;
+}
+
+h5,
+.h5.h5 {
+    @include h5;
+}
+
+@mixin h6() {
+    font-size: inherit;
+    font-weight: $font-medium;
+}
+
+h6,
+.h6.h6 {
+    @include h6;
+}
+
+// general headlines
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5,
+h6,.h6 {
+    line-height: 1.2;
+    font-weight: $font-medium;
+    hyphens: auto;
+    font-family: var(--font-family-heading);
+
+    @include first-no-margin('top');
+    @include last-no-margin('bottom');
+
+    @include breakpoint-up(lg) {
+        hyphens: initial;
+    }
+}
+
+// Headlines used inside regular bodytext
+.content {
+    h1,.h1,
+    h2,.h2,
+    h3,.h3,
+    h4,.h4,
+    h5,.h5 {
+        margin-top: $size-24;
+        margin-bottom: $size-20;
+        display: block;
+
+        @include first-no-margin('top');
+        @include last-no-margin('bottom');
+
+        @include breakpoint-up(md) {
+            margin-top: $size-32;
+            margin-bottom: $size-24;
+        }
+    }
+}

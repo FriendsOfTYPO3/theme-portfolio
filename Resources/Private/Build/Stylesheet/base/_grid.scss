@@ -1,0 +1,96 @@
+@use 'sass:map';
+
+.container {
+  max-width: $container-max-width;
+}
+
+.container-fluid,
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 0;
+  box-sizing: border-box;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+
+  &.fullwidth {
+    max-width: initial;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+  }
+
+  .container-fluid,
+  .container {
+    max-width: unset;
+  }
+
+  @include breakpoint-up(md) {
+    padding-left: $container-padding-md;
+    padding-right: $container-padding-md;
+  }
+
+  @include breakpoint-up(lg) {
+    padding-left: $container-padding-lg;
+    padding-right: $container-padding-lg;
+  }
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  width: calc(100% + #{$col-padding} * 2);
+  padding-left: $row-padding;
+  padding-right: $row-padding;
+  margin-left: -$col-padding;
+  margin-right: -$col-padding;
+
+  &.no-offset {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.col {
+  flex: 0 0 auto;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+  flex-basis: auto;
+  box-sizing: border-box;
+  padding: 0 $col-padding;
+}
+
+/* GRID */
+@each $name, $size in $breakpoints {
+  @include breakpoint-up(#{$name}) {
+    @for $i from 1 through $gridsize {
+      .#{$name}-#{$i} {
+        width: calc(100% / (#{$gridsize} / #{$i}));
+      }
+
+      .#{$name}-offset-#{$i} {
+        margin-left: calc(100% / (#{$gridsize} / #{$i}));
+      }
+
+      .#{$name}-minus-offset-#{$i} {
+        margin-left: calc(100% / (-1 * #{$gridsize} / #{$i}));
+      }
+    }
+
+    .#{$name}-offset-0 {
+      margin-left: 0;
+    }
+
+    .#{$name}-fifth {
+      width: 20%;
+    }
+
+    .#{$name}-minus-offset-0 {
+      margin-left: 0;
+    }
+  }
+}

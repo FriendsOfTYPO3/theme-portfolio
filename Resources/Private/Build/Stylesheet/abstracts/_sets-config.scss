@@ -1,0 +1,22 @@
+@include css-root-vars() {
+    // Current Variables set inside the style tag
+/*
+        --color-primary: #ff854d;
+        --color-secondary: #fac516;
+        --content-alignment: 'left';
+        --font-family-heading:  'Roboto Slab', 'Georgia', serif;
+        --font-family-copytext: 'Roboto', 'Tahoma', sans-serif;
+ */
+
+    [data-button-border-radius='none'] {
+        --button-border-radius: 0;
+    }
+
+    [data-button-border-radius='rounded'] {
+        --button-border-radius: #{$size-4};
+    }
+
+    [data-button-border-radius='round'] {
+        --button-border-radius: #{$size-32};
+    }
+}

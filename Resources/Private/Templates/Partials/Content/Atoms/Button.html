@@ -1,0 +1,30 @@
+<html
+    data-namespace-typo3-fluid="true"
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+
+<f:comment>
+    <!--
+        <f:render partial="Content/Components/Atoms/Button" arguments="{
+            text: string,
+            link: string (optional),
+            secondary: bool (optional),
+            small: bool (optional),
+        }" />
+    -->
+</f:comment>
+
+<f:if condition="{link}">
+    <f:then>
+        <f:link.typolink parameter="{link}" class="button {f:if(condition: secondary, then: 'button--secondary')} {f:if(condition: small, then: 'button--small')}">
+            {label}
+        </f:link.typolink>
+    </f:then>
+    <f:else>
+        <button class="button">
+            {label}
+        </button>
+    </f:else>
+</f:if>
+
+</html>

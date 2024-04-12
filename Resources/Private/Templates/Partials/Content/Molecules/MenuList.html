@@ -1,0 +1,15 @@
+<nav class="menu {classes}">
+    <ul class="menu__list">
+        <f:for each="{menu}" as="item">
+            <li class="menu__list__item">
+                <f:if condition="{item.link}">
+                    <f:render partial="Content/Atoms/MenuLink" arguments="{
+                            link: item.link,
+                            text: item.title,
+                            active: item.active
+                        }"/>
+                </f:if>
+            </li>
+        </f:for>
+    </ul>
+</nav>

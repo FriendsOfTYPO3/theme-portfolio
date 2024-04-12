@@ -1,0 +1,8 @@
+.subheadline {
+    font-size: $font-18;
+    color: var(--color-base-text-secondary);
+
+    @include breakpoint-up(md) {
+        font-size: $font-24;
+    }
+}

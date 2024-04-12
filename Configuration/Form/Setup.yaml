@@ -1,0 +1,23 @@
+TYPO3:
+  CMS:
+    Form:
+      persistenceManager:
+        allowSaveToExtensionPaths: true
+        allowedExtensionPaths:
+          110: EXT:theme_portfolio/Resources/Private/Forms/
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                translation:
+                  # Beachte die Schreibweise: 'translationFiles' erst ab TYPO3 v10! Vorher 'translationFile'.
+                  translationFiles:
+                    # Standard-Sprachdatei von EXT:form (wird immer benötigt, muss aber nur in TYPO3 v8 und v9 manuell verlinkt werden):
+                    10: 'EXT:form/Resources/Private/Language/locallang.xlf'
+                    # Lade deine eigenen Sprachdateien nachfolgend:
+                    20: 'EXT:theme_portfolio/Resources/Private/Language/locallang_form.xlf'
+                templateRootPaths:
+                  20: 'EXT:theme_portfolio/Resources/Private/Templates/Form/'
+                partialRootPaths:
+                  20: 'EXT:theme_portfolio/Resources/Private/Templates/Form/Partials/'

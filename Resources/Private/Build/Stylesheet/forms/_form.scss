@@ -1,0 +1,43 @@
+.content-form {
+    &__header {
+        margin-bottom: $size-32;
+    }
+
+    &__form {
+        display: block;
+        width: 100%;
+
+        .col-6,
+        .col-sm-6,
+        .col-lg-6,
+        .col-md-6,
+        .col-lg-6 {
+            width: 50%;
+        }
+
+        .row {
+            margin-left: calc($col-padding / -2);
+            margin-right: calc($col-padding / -2);
+            width: calc(100% + #{$col-padding});
+        }
+
+        [class*='col-'] {
+            padding: 0 (calc($col-padding / 2));
+        }
+
+        .form-group {
+            margin-bottom: calc($col-padding * 1.5);
+        }
+
+        .form-label {
+            display: inline-block;
+            margin-bottom: $size-8;
+        }
+    }
+
+    @include breakpoint-up(md) {
+        &__header {
+            margin-bottom: $size-48;
+        }
+    }
+}

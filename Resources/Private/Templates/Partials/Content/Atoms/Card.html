@@ -1,0 +1,64 @@
+<div class="card__wrapper">
+    <div>
+        <h5 class="card__headline">{title}</h5>
+        <f:if condition="{charLimit}">
+            <f:then>
+                <div class="card__description">
+                    <f:format.crop maxCharacters="{charLimit}">
+                        {description -> f:format.html()}
+                    </f:format.crop>
+                </div>
+            </f:then>
+
+            <f:else>
+                <div class="card__description">
+                    {description -> f:format.html()}
+                </div>
+            </f:else>
+        </f:if>
+    </div>
+
+    <div>
+        <f:if condition="{externalLinks}">
+            <div class="card__external-links">
+                <f:for each="{externalLinks}" as="link">
+                    <f:if condition="{link}">
+                        <a class="card__link link" href="{link.link}">
+                            <div class="card__icon">
+                                <span class="icon icon-link"></span>
+                            </div>
+                            <span>{link.name}</span>
+                        </a>
+                    </f:if>
+                </f:for>
+            </div>
+        </f:if>
+
+        <f:if condition="{categories}">
+            <div class="card__tags">
+                <f:for each="{categories}" as="category">
+                    <f:if condition="{category}">
+                        <f:render partial="Content/Atoms/Pill" arguments="{
+                    text: category.title
+                    }"/>
+                    </f:if>
+                </f:for>
+            </div>
+        </f:if>
+
+        <f:if condition="{showReadMore}">
+            <f:then>
+                <f:link.action
+                        action="show"
+                        arguments="{project: project}"
+                        extensionName="ThemePortfolio"
+                        controller="Project"
+                        pluginName="Projects"
+                        pageUid="{detailPid}"
+                        class="link project-link">
+                    Read More
+                </f:link.action>
+            </f:then>
+        </f:if>
+    </div>
+</div>

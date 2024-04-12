@@ -1,0 +1,145 @@
+/* ====  Radio and Checkbox Input ==== */
+
+.radio-container .radio,
+.form-check {
+    position: relative;
+    user-select: none;
+    z-index: 0;
+    -webkit-tap-highlight-color: transparent;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    label {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        line-height: inherit;
+    }
+
+    .label {
+        display: inline-block;
+        padding-left: $size-32;
+        padding-right: 1rem;
+        font-size: $font-18;
+    }
+
+    p {
+        margin-bottom: $col-padding;
+        padding-left: $size-32;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.input.checkbox {
+    .form-text {
+        display: block;
+        font-size: $font-16;
+        padding-left: $size-32;
+    }
+}
+
+.radio-container {
+    display: flex;
+    flex-flow: row wrap;
+    gap: $size-20;
+}
+
+.radiomark,
+.checkmark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: $size-20;
+    height: $size-20;
+    border: 2px solid var(--color-border);
+    background-color: var(--color-section-background-light);
+    transition: background-color .1s linear;
+    border-radius: .4rem;
+
+    .bg--section-background-light & {
+        background-color: var(--color-section-background-dark);
+    }
+
+    &::after {
+        content: '';
+        display: none;
+        position: absolute;
+    }
+}
+
+.checkmark::after {
+    top: .2rem;
+    left: .55rem;
+    width: 0.5rem;
+    height: 1rem;
+    border: solid var(--color-primary);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.radiomark {
+    border-radius: 50%;
+
+    &::after {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: .5rem;
+        height: .5rem;
+        margin: auto;
+        border-radius: 50%;
+        background-color: var(--color-primary);
+    }
+}
+
+main {
+    input[type="radio"],
+    input[type="checkbox"] {
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+        top: .5rem;
+        left: .5rem;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+
+        &:checked {
+            ~ .radiomark,
+            ~ .checkmark {
+                border-color: var(--color-primary);
+
+                &::after {
+                    display: block;
+                }
+            }
+
+            &[disabled] {
+                ~ .radiomark,
+                ~ .checkmark {
+                    border-color: var(--color-primary);
+
+                    &::after {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        &:hover ~,
+        &:active ~,
+        &:focus ~ {
+            .radiomark,
+            .checkmark {
+                border-color: var(--color-base-text);
+            }
+        }
+    }
+}

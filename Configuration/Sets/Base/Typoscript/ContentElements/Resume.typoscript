@@ -1,0 +1,39 @@
+tt_content.resume =< lib.contentElement
+tt_content.resume {
+    templateName = Resume
+
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        10 {
+            table = tx_portfolio_resume_item
+            pidInList {
+                field = parent
+            }
+            where = (parent=###uid### AND deleted=0 AND hidden=0 AND is_additional_item=0)
+            orderBy = sorting
+            as = resume_items
+            markers {
+                uid {
+                    field = uid
+                }
+            }
+        }
+
+        20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        20 {
+            table = tx_portfolio_resume_item
+            pidInList {
+                field = parent
+            }
+            where = (parent=###uid### AND deleted=0 AND hidden=0 AND is_additional_item=1)
+            orderBy = sorting
+            as = additional_resume_items
+            markers {
+                uid {
+                    field = uid
+                }
+            }
+        }
+    }
+}
+

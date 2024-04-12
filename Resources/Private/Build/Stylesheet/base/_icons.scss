@@ -1,0 +1,99 @@
+.icons-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+
+  &__item {
+    height: 10rem;
+    width: 10rem;
+    border: 2px solid var(--color-base-border);
+    background-color: var(--color-section-background-dark);
+    border-radius: var(--button-border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      border: $size-2 solid var(--color-secondary);
+      transition: all .3s ease-in-out;
+    }
+  }
+}
+
+.icon-facebook {
+  -webkit-mask-image: url('../Icons/FontAwesome/facebook-f.svg');
+}
+
+.icon-github {
+  -webkit-mask-image: url('../Icons/FontAwesome/github.svg')
+}
+
+.icon-instagram {
+  -webkit-mask-image: url('../Icons/FontAwesome/instagram.svg');
+}
+
+.icon-link {
+  -webkit-mask-image: url('../Icons/FontAwesome/link.svg')
+}
+
+.icon-linkedin {
+  -webkit-mask-image: url('../Icons/FontAwesome/linkedin.svg')
+}
+
+.icon-pinterest {
+  -webkit-mask-image: url('../Icons/FontAwesome/pinterest.svg')
+}
+
+.icon-reddit {
+  -webkit-mask-image: url('../Icons/FontAwesome/reddit.svg')
+}
+
+.icon-snapchat {
+  -webkit-mask-image: url('../Icons/FontAwesome/snapchat.svg')
+}
+
+.icon-threads {
+  -webkit-mask-image: url('../Icons/FontAwesome/threads.svg')
+}
+
+.icon-tiktok {
+  -webkit-mask-image: url('../Icons/FontAwesome/tiktok.svg')
+}
+
+.icon-tumblr {
+  -webkit-mask-image: url('../Icons/FontAwesome/tumblr.svg')
+}
+
+.icon-twitch {
+  -webkit-mask-image: url('../Icons/FontAwesome/twitch.svg')
+}
+
+.icon-vimeo {
+  -webkit-mask-image: url('../Icons/FontAwesome/vimeo.svg')
+}
+
+.icon-whatsapp {
+  -webkit-mask-image: url('../Icons/FontAwesome/whatsapp.svg')
+}
+
+.icon-x {
+  -webkit-mask-image: url('../Icons/FontAwesome/x-twitter.svg')
+}
+
+.icon-xing {
+  -webkit-mask-image: url('../Icons/FontAwesome/xing.svg');
+}
+
+.icon-youtube {
+  -webkit-mask-image: url('../Icons/FontAwesome/youtube.svg')
+}
+
+
+
+
+
+
+

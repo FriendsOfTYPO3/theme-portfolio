@@ -1,0 +1,21 @@
+<section class="section ce-{data.CType} {data.background}">
+    <f:render section="Header" optional="true">
+        <f:variable name="contentAlignment" value="{site.settings.all.style.contentAlignment}"/>
+        <f:if condition="{data.header} || {data.subheader} || {data.bodytext}">
+            <div class="container ce__header">
+                <div class="row">
+                    <div class="col sm-12 md-offset-2 md-8 xl-offset-3 xl-6">
+                        <f:render partial="Content/Molecules/HeadlineCopytext" arguments="{
+                        headline: data.header,
+                        headlineTag: data.header_layout,
+                        headlinePosition: '{f:if(condition: \'{contentAlignment} == center\', then: \'center\', else: data.header_position)}',
+                        subheadline: data.subheader,
+                        bodytext: data.bodytext
+                    }"/>
+                    </div>
+                </div>
+            </div>
+        </f:if>
+    </f:render>
+    <f:render section="Main" optional="true" />
+</section>

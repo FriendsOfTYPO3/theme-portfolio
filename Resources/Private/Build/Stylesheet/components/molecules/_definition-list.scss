@@ -1,0 +1,15 @@
+.definition-list {
+    margin-bottom: -$size-32;
+
+    .definition-list-item__content {
+        margin-bottom: $size-32;
+    }
+
+    @include breakpoint-up(lg) {
+        margin-bottom: -$size-48;
+
+        .definition-list-item__content {
+            margin-bottom: $size-48;
+        }
+    }
+}

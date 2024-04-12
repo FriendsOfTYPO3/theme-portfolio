@@ -1,0 +1,9 @@
+page.10.dataProcessing {
+    20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+    20 {
+        special = directory
+        special.value = 1
+        levels = 1
+        as = headerMenu
+    }
+}

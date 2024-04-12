@@ -1,0 +1,22 @@
+.project-detail-page{
+
+  h3{
+    margin-bottom: $size-24;
+  }
+  &__description{
+    margin-bottom: $size-24;
+  }
+  &__links{
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: $size-64;
+  }
+  &__image{
+    width: 100%;
+    height: 100%;
+    margin-bottom: $size-48;
+    @include breakpoint-up(md){
+      margin-bottom: 0;
+    }
+  }
+}

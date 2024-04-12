@@ -1,0 +1,18 @@
+.content a,
+.link {
+    --link-color: var(--color-primary);
+    --link-hover-color: var(--color-secondary);
+
+    color: var(--link-color);
+    font-size: inherit;
+    text-decoration: underline;
+
+    @include interaction {
+        color: var(--link-hover-color);
+    }
+
+    &.link--secondary {
+        --link-color: var(--color-seconadry);
+        --link-hover-color: var(--color-primary);
+    }
+}

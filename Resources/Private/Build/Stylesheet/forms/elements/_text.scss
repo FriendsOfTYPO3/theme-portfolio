@@ -1,0 +1,28 @@
+textarea,
+input[type='text'],
+input[type='date'],
+input[type='email'],
+input[type='tel'] {
+    display: block;
+    width: 100%;
+    padding: $size-12;
+    font-size: $font-16;
+    background-color: var(--color-section-background-light);
+    border: 1px solid var(--color-border);
+    font-family: var(--font-family);
+    color: var(--color-base-text);
+    border-radius: $size-4;
+
+    .bg--section-background-light & {
+        background-color: var(--color-base-background);
+        border: 1px solid var(--color-section-background-light);
+    }
+
+    @include interaction {
+        border-color: var(--color-base-text);
+    }
+}
+
+textarea {
+    min-height: 16rem;
+}

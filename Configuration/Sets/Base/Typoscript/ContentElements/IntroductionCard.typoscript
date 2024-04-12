@@ -1,0 +1,13 @@
+tt_content.introduction_card =< lib.contentElement
+tt_content.introduction_card {
+    templateName = IntroductionCard
+
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        10 {
+            references.fieldName = image
+            as = image
+        }
+    }
+}
+

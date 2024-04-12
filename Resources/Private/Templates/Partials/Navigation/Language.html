@@ -1,0 +1,15 @@
+<div class="languages">
+    <f:for each="{languages}" as="language">
+        <f:if condition="{language.link}">
+            <f:if condition="{language.active}">
+                <f:then>
+                    <a href="{language.link}" title="{language.title}">{language.title}</a>
+                </f:then>
+                <f:else>
+                    <a href="{language.link}" title="{language.title}" class="inactive">{language.title}</a>
+                </f:else>
+            </f:if>
+        </f:if>
+    </f:for>
+</div>
+

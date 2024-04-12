@@ -1,0 +1,19 @@
+<div class="project-list container {data.background}">
+    <div class="row">
+        <f:for each="{projects}" as="project">
+            <div class="col sm-12 md-6 lg-4">
+                <f:render partial="Content/Atoms/Card" arguments="{
+                    title: project.title,
+                    description: project.description,
+                    showReadMore: project.showDetailPage,
+                    link: project,
+                    project: project,
+                    externalLinks: project.links,
+                    categories: project.categories,
+                    charLimit: 200
+                    }"/>
+            </div>
+        </f:for>
+    </div>
+</div>
+

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="de"  datatype="plaintext" original="EXT:theme_portfolio/Resources/Private/Language/locallang_db.xlf" product-name="portfolio">
+		<header/>
+		<body>
+			<trans-unit id="content_element.introduction_card" resname="content_element.introduction_card" xml:space="preserve">
+				<source>Introduction Card</source>
+				<target>Einleitungskarte</target>
+			</trans-unit>
+			<trans-unit id="content_element.introduction_card.description" resname="content_element.introduction_card" xml:space="preserve">
+				<source>A element to introduce yourself</source>
+				<target>Element um sich vorzustellen</target>
+			</trans-unit>
+
+			<trans-unit id="content_element.skill_display" resname="content_element.skill_display" xml:space="preserve">
+				<source>Skill Display</source>
+				<target>Skillanzeige</target>
+			</trans-unit>
+			<trans-unit id="content_element.skill_display.description" resname="content_element.skill_display.description" xml:space="preserve">
+				<source>A element to present your skills</source>
+				<target>Ein Element zur Präsentation der Skills</target>
+			</trans-unit>
+			<trans-unit id="content_element.skill_display.show_progress_level" resname="content_element.skill_display.show_progress_level" xml:space="preserve">
+				<source>Show skills progress bar for skills</source>
+				<target>Zeige Progressbar für alle Skills</target>
+			</trans-unit>
+			<trans-unit id="content_element.skill_display.skill" resname="content_element.skill_display.skill" xml:space="preserve">
+				<source>Skill</source>
+				<target>Skill</target>
+			</trans-unit>
+			<trans-unit id="content_element.skill_display.skills" resname="content_element.skill_display.skills" xml:space="preserve">
+				<source>Skills</source>
+				<target>Skills</target>
+			</trans-unit>
+			<trans-unit id="content_element.skill_display.skills_help" resname="content_element.skill_display.skills_help" xml:space="preserve">
+				<source>Please list all skills here and sort them as required</source>
+				<target>Bitte liste alle Skills auf und sortiere sie nach Bedarf</target>
+			</trans-unit>
+			<trans-unit id="content_element.skill_display.skill_name" resname="content_element.skill_display.skill_name" xml:space="preserve">
+				<source>Name</source>
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="content_element.skill_display.skill_level" resname="content_element.skill_display.skill_level" xml:space="preserve">
+				<source>Progress Level (in Percent)</source>
+				<target>Fortschritt (in Prozent)</target>
+			</trans-unit>
+
+			<trans-unit id="content_element.resume" resname="content_element.resume" xml:space="preserve">
+				<source>Resume</source>
+				<target>Lebenslauf</target>
+			</trans-unit>
+			<trans-unit id="content_element.resume.description" resname="content_element.resume.description" xml:space="preserve">
+				<source>Ein Element zur Präsentation deines Lebenslaufs</source>
+			</trans-unit>
+			<trans-unit id="content_element.resume.item" resname="content_element.resume.item" xml:space="preserve">
+				<source>Resume section</source>
+				<target>Lebenslaufabschnitt</target>
+			</trans-unit>
+			<trans-unit id="content_element.resume.items" resname="content_element.resume.items" xml:space="preserve">
+				<source>Resume sections</source>
+				<target>Lebenslaufabschnitte</target>
+			</trans-unit>
+			<trans-unit id="content_element.services">
+				<source>Services</source>
+				<target>Services</target>
+			</trans-unit>
+			<trans-unit id="content_element.services.description">
+				<source>A element to present all provided services</source>
+				<target>Ein Element zur Präsentation der angebotenen Services</target>
+			</trans-unit>
+			<trans-unit id="content_element.client_logos">
+				<source>Client Logos</source>
+				<target>Kundenlogos</target>
+			</trans-unit>
+			<trans-unit id="content_element.client_logos.description">
+				<source>A element to present all logos of a list of clients</source>
+				<target>Ein Element zur Präsentation aller Logos einer Liste von Kunden</target>
+			</trans-unit>
+			<trans-unit id="content_element.themeportfolio_projects">
+				<source>Projects</source>
+				<target>Projekte</target>
+			</trans-unit>
+			<trans-unit id="content_element.themeportfolio_projects.description">
+				<source>A element to present all projects including details</source>
+				<target>Ein Element zum Anzeigen aller Projekte inkl. Detailseite</target>
+			</trans-unit>
+			<trans-unit id="content_element.project_teaser">
+				<source>Projects Teaser</source>
+				<target>Projekt Teaser</target>
+			</trans-unit>
+			<trans-unit id="content_element.project_teaser.description">
+				<source>A element to present the latest projects</source>
+				<target>Ein Element zum Anteasern der letzten Projekte</target>
+			</trans-unit>
+
+			<trans-unit id="field.link">
+				<source>Link</source>
+				<target>Link</target>
+			</trans-unit>
+			<trans-unit id="field.link_text">
+				<source>Link text</source>
+				<target>Link Text</target>
+			</trans-unit>
+			<trans-unit id="field.location">
+				<source>Location</source>
+				<target>Standort</target>
+			</trans-unit>
+			<trans-unit id="field.position">
+				<source>Position</source>
+				<target>Position</target>
+			</trans-unit>
+			<trans-unit id="field.time_period">
+				<source>Time period</source>
+				<target>Zeitraum</target>
+			</trans-unit>
+			<trans-unit id="field.description">
+				<source>Description</source>
+				<target>Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="field.institution">
+				<source>Institution</source>
+				<target>Institution</target>
+			</trans-unit>
+			<trans-unit id="field.name">
+				<source>Name</source>
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="field.title">
+				<source>Title</source>
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="field.image">
+				<source>Image</source>
+				<target>Bild</target>
+			</trans-unit>
+			<trans-unit id="field.links">
+				<source>Links</source>
+				<target>Links</target>
+			</trans-unit>
+			<trans-unit id="field.header_style">
+				<source>Header Style</source>
+				<target>Header Style</target>
+			</trans-unit>
+			<trans-unit id="field.header_style.h1">
+				<source>h1</source>
+				<target>h1</target>
+			</trans-unit>
+			<trans-unit id="field.header_style.h2">
+				<source>h2</source>
+				<target>h2</target>
+			</trans-unit>
+			<trans-unit id="field.header_style.h3">
+				<source>h3</source>
+				<target>h3</target>
+			</trans-unit>
+			<trans-unit id="field.header_style.h4">
+				<source>h4</source>
+				<target>h4</target>
+			</trans-unit>
+			<trans-unit id="field.header_style.h5">
+				<source>h5</source>
+				<target>h5</target>
+			</trans-unit>
+			<trans-unit id="field.header_style.h6">
+				<source>h6</source>
+				<target>h6</target>
+			</trans-unit>
+			<trans-unit id="field.background">
+				<source>Background</source>
+				<target>Hintergrund</target>
+			</trans-unit>
+			<trans-unit id="field.background.light">
+				<source>Light</source>
+				<target>Hell</target>
+			</trans-unit>
+			<trans-unit id="field.background.dark">
+				<source>Dark</source>
+				<target>Dunkel</target>
+			</trans-unit>
+			<trans-unit id="field.showDetailPage">
+				<source>Show detail page</source>
+				<target>Detailseite anzeigen</target>
+			</trans-unit>
+
+			<trans-unit id="field.additional_header">
+				<source>Additional Header</source>
+				<target>Zusätzlicher Header</target>
+			</trans-unit>
+			<trans-unit id="field.additional_resume_items">
+				<source>Additional resume sections</source>
+				<target>Zusätzliche Lebenslaufabschnitte</target>
+			</trans-unit>
+
+			<trans-unit id="tx_portfolio_domain_model_project">
+				<source>Project</source>
+				<target>Projekt</target>
+			</trans-unit>
+			<trans-unit id="content_element.project_portfolio">
+				<source>Project Listing</source>
+				<target>Projekt Liste</target>
+			</trans-unit>
+			<trans-unit id="content_element.project_portfolio.description">
+				<source>A element for displaying all projects</source>
+				<target>Ein Element zum Anzeigen aller Projekte</target>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

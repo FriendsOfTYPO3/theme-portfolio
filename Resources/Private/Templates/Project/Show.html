@@ -1,0 +1,39 @@
+<section class="project-detail-page section {data.background}">
+    <div class="container">
+        <div class="row">
+            <div class="col sm-12 md-8 xl-6 md-offset-1 lg-offset-2">
+                <h3>{project.title}</h3>
+
+                <div class="project-detail-page__description">
+                    {project.description -> f:format.html()}
+                </div>
+
+                <div class="card__external-links project-detail-page__links">
+                    <f:for each="{project.links}" as="link">
+                        <f:if condition="{link}">
+                            <a class="card__link link" href="{link.link}">
+                                <div class="card__icon">
+                                    <span class="icon icon-link"></span>
+                                </div>
+                                <span>{link.name}</span>
+                            </a>
+                        </f:if>
+                    </f:for>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <f:for each="{project.images}" as="image">
+                <f:if condition="{image}">
+                    <div class="col sm-12 md-6">
+                        <f:render partial="Content/Atoms/Image" arguments="{
+                              image: image,
+                              classes: 'project-detail-page__image'
+                        }"/>
+                    </div>
+                </f:if>
+            </f:for>
+        </div>
+    </div>
+</section>

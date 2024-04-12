@@ -1,0 +1,20 @@
+<html
+    data-namespace-typo3-fluid="true"
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+
+<f:comment>
+    <!--
+        <f:render partial="Content/Atoms/Link" arguments="{
+            label: string,
+            link: string (optional),
+            secondary: bool (optional),
+        }" />
+    -->
+</f:comment>
+
+<f:link.typolink parameter="{link}" class="link {f:if(condition: '{isSecondary}', then: 'link--secondary')}">
+    {label}
+</f:link.typolink>
+
+</html>

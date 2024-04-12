@@ -1,0 +1,9 @@
+.project-list {
+    .row{
+        row-gap: #{$col-padding * 2};
+    }
+
+    &__show-more {
+        margin-top: $size-48;
+    }
+}

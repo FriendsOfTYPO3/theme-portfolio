@@ -1,0 +1,11 @@
+.ce-social-icons {
+    background-color: var(--color-section-background-light);
+
+    .bg--section-background-light + & {
+        background-color: var(--color-section-background-dark);
+
+        .icons-list__item {
+            background-color: var(--color-section-background-light);
+        }
+    }
+}

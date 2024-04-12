@@ -1,0 +1,38 @@
+<f:layout name="ContentBlock" />
+<f:section name="Main">
+
+    <f:variable name="contentAlignment" value="{site.settings.all.style.contentAlignment}"/>
+    <div class="project-list">
+        <div class="container">
+            <div class="row project-list__teaser">
+                <div class="col sm-12 md-12 xl-10 xl-offset-1">
+                    <div class="row justify-content-{contentAlignment}">
+                        <f:for each="{projects}" as="project">
+                            <div class="col sm-12 md-6 lg-4">
+                                <f:render partial="Content/Atoms/Card" arguments="{
+                            title: project.data.title,
+                            description: project.data.description,
+                            showReadMore: project.data.show_detail_page,
+                            link: project.data,
+                            project: project.data.uid,
+                            detailPid: detailPid
+                        }"/>
+                            </div>
+                        </f:for>
+                    </div>
+                </div>
+            </div>
+            <f:if condition="{data.link}">
+                <div class="row project-list__show-more">
+                    <div class="col sm-12 md-10 md-offset-1 lg-7 lg-offset-2 xl-8 xl-offset-2 text-{contentAlignment}">
+                        <f:render partial="Content/Atoms/Button" arguments="{
+                            label: data.link_text,
+                            link: data.link
+                        }" />
+                    </div>
+                </div>
+            </f:if>
+        </div>
+    </div>
+
+</f:section>

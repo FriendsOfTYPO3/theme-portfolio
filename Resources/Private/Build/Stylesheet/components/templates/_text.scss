@@ -1,0 +1,7 @@
+.ce-text {
+    + .ce-image,
+    + .ce-textpic,
+    + .ce-text {
+        margin-top: calc(-1 * var(--spacer-lg));
+    }
+}

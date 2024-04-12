@@ -1,0 +1,38 @@
+<html
+    data-namespace-typo3-fluid="true"
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+
+<f:comment>
+    <!--
+        <f:render partial="Content/Molecules/DefinitionList" arguments="{
+            list: array
+        }" />
+    -->
+</f:comment>
+
+<dl class="definition-list">
+    <f:for each="{list}" as="listItem">
+        <f:variable name="footerContent">
+            <f:if condition="{listItem.data.institution} && {listItem.data.location}">
+                <f:then>
+                    {listItem.data.institution} / {listItem.data.location}
+                </f:then>
+                <f:else if="{listItem.data.institution}">
+                    {listItem.data.institution}
+                </f:else>
+                <f:else if="{listItem.data.location}">
+                    {listItem.data.location}
+                </f:else>
+            </f:if>
+        </f:variable>
+        <f:render partial="Content/Atoms/DefinitionListItem" arguments="{
+            headline: listItem.data.time_period,
+            contentHeadline: listItem.data.position,
+            content: listItem.data.description,
+            contentFooter: '{footerContent -> f:spaceless()}'
+        }" />
+    </f:for>
+</dl>
+
+</html>

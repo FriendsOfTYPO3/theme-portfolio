@@ -1,0 +1,65 @@
+.ce-introduction-card {
+    $component: &;
+
+    min-height: 80svh;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+
+    .row {
+        align-items: center;
+    }
+
+    &__image {
+        margin-bottom: $size-24;
+
+        .image {
+            overflow: hidden;
+            border-radius: 50%;
+            max-width: 25rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__content {
+        text-align: center;
+
+        .headline {
+            &:not(:last-child) {
+                margin-bottom: $size-12;
+            }
+        }
+
+        .content {
+            --text-color: var(--color-base-text-secondary);
+            --font-size: #{$font-18};
+
+            &:not(:last-child) {
+                margin-bottom: $size-32;
+            }
+        }
+    }
+
+    @include breakpoint-up(md) {
+        &__content {
+            .content {
+                --font-size: #{$font-24};
+            }
+        }
+    }
+
+    @include breakpoint-up(lg) {
+        &__content {
+            text-align: left;
+        }
+
+        &__image {
+            margin-bottom: 0;
+
+            &.text-center {
+                margin-bottom: $size-24;
+            }
+        }
+    }
+}

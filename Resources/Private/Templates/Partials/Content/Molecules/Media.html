@@ -1,0 +1,29 @@
+<html
+    data-namespace-typo3-fluid="true"
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+
+<f:comment>
+    <!--
+      <f:render partial="Content/Molecules/Media" arguments="{
+          media: FileReference,
+          imgClass: string (optional),
+      }" />
+    -->
+</f:comment>
+
+<f:if condition="{media.type} == 4">
+    <f:then>
+        <f:render partial="Content/Atoms/Video" arguments="{
+            video: media
+        }" />
+    </f:then>
+    <f:else if="{media.type} == 2 || {media.type} == 3">
+        <f:render partial="Content/Atoms/Image" arguments="{
+              image: media,
+              classes: imgClass
+          }" />
+    </f:else>
+</f:if>
+
+</html>

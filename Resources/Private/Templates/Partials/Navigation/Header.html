@@ -1,0 +1,30 @@
+<html
+        data-namespace-typo3-fluid="true"
+        xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+
+<header class="header">
+    <a href="/" class="header__logo">
+        <f:if condition="{settings.logo}">
+            <f:then>
+                <img src="{settings.logo.path}" alt="{site.configuration.websiteTitle}"/>
+            </f:then>
+            <f:else>
+                {site.configuration.websiteTitle}
+            </f:else>
+        </f:if>
+    </a>
+
+    <f:render partial="Content/Molecules/MenuList" arguments="{
+        menu: headerMenu,
+        classes: 'header__menu'
+    }" />
+
+    <button class="header__mobile-burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+</header>
+</html>

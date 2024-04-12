@@ -1,0 +1,18 @@
+<f:layout name="ContentBlock" />
+<f:section name="Main">
+
+    <div class="container">
+        <div class="row">
+            <div class="col sm-12 md-offset-2 md-8 xl-offset-3 xl-6">
+                <f:if condition="{image.0}">
+                    <f:for each="{image}" as="singleImage">
+                        <f:render partial="Content/Molecules/Media" arguments="{
+                            media: singleImage
+                        }" />
+                    </f:for>
+                </f:if>
+            </div>
+        </div>
+    </div>
+
+</f:section>

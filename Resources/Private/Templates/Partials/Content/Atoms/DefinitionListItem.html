@@ -1,0 +1,36 @@
+<html
+    data-namespace-typo3-fluid="true"
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+
+<f:comment>
+    <!--
+        <f:render partial="Content/Atoms/DefinitionListItem" arguments="{
+            headline: string,
+            contentHeadline: string (optional),
+            content: string,
+            contentFooter: string (optional)
+        }" />
+    -->
+</f:comment>
+
+<dt class="definition-list-item__header">
+    {headline}
+</dt>
+<dd class="definition-list-item__content">
+    <f:if condition="{contentHeadline}">
+        <p class="h5 headline definition-list-item__content__headline">
+            {contentHeadline}
+        </p>
+    </f:if>
+    <p class="definition-list-item__content__text">
+        {content}
+    </p>
+    <f:if condition="{contentFooter}">
+        <p class="definition-list-item__content__footer">
+            {contentFooter}
+        </p>
+    </f:if>
+</dd>
+
+</html>

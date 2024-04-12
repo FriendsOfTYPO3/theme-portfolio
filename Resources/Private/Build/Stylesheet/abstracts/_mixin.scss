@@ -1,0 +1,161 @@
+@use "sass:map";
+@use "sass:math";
+
+/* ==== Mixins ==== */
+
+// Media Queries
+// min-width: @include breakpoint(md) {}
+// max-width: @include breakpoint-down(md) {}
+// min-width and max-width: @include breakpoint-between(sm, md) {}
+
+// min-width
+@mixin breakpoint-up($breakpoint) {
+    // If the breakpoint exists in the map.
+    @if map.has-key($breakpoints, $breakpoint) {
+        // Get the breakpoint value.
+        $breakpoint-value: map.get($breakpoints, $breakpoint);
+        // Write the media query.
+        @media only screen and (min-width: $breakpoint-value) {
+            @content;
+        }
+        // If the breakpoint doesn't exist in the map.
+    } @else {
+        // Log a warning.
+        @warn "Invalid breakpoint: #{$breakpoint}.";
+    }
+}
+
+// max-width
+@mixin breakpoint-down($breakpoint) {
+    // If the breakpoint exists in the map.
+    @if map.has-key($breakpoints, $breakpoint) {
+        // Get the breakpoint value.
+        $breakpoint-value: map.get($breakpoints, $breakpoint);
+        // Write the media query.
+        @media only screen and (max-width: ($breakpoint-value - 1)) {
+            @content;
+        }
+        // If the breakpoint doesn't exist in the map.
+    } @else {
+        // Log a warning.
+        @warn "Invalid breakpoint: #{$breakpoint}.";
+    }
+}
+
+// min-width and max-width
+@mixin breakpoint-between($lower, $upper) {
+    // If both the lower and upper breakpoints exist in the map.
+    @if map.has-key($breakpoints, $lower) and map.has-key($breakpoints, $upper) {
+        // Get the lower and upper breakpoints.
+        $lower-breakpoint: map.get($breakpoints, $lower);
+        $upper-breakpoint: map.get($breakpoints, $upper);
+        // Write the media query.
+        @media only screen and (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+            @content;
+        }
+
+        // If one or both of the breakpoints don't exist.
+    } @else {
+        // If lower breakpoint is invalid.
+        @if (map.has-key($breakpoints, $lower) == false) {
+            // Log a warning.
+            @warn "Your lower breakpoint was invalid: #{$lower}.";
+        }
+        // If upper breakpoint is invalid.
+        @if (map.has-key($breakpoints, $upper) == false) {
+            // Log a warning.
+            @warn "Your upper breakpoint was invalid: #{$upper}.";
+        }
+    }
+}
+
+@mixin css-root-vars() {
+    :root {
+        @content;
+    }
+}
+
+@mixin default-bg-img($url: '', $width: 100%, $height: 100%) {
+    background-image: url("#{$url}");
+    background-size: $width $height;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@mixin interaction {
+    &:hover,
+    &:focus,
+    &:active {
+        @content;
+    }
+}
+
+@mixin last-no-margin($pos: 'right') {
+    @if $pos == 'bottom' {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    } @else if $pos == 'left' {
+        &:last-child {
+            margin-left: 0;
+        }
+    } @else if $pos == 'top' {
+        &:last-child {
+            margin-top: 0;
+        }
+    } @else {
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+@mixin first-no-margin($pos: 'left') {
+    @if $pos == 'bottom' {
+        &:first-child {
+            margin-bottom: 0;
+        }
+    } @else if $pos == 'right' {
+        &:first-child {
+            margin-right: 0;
+        }
+    } @else if $pos == 'top' {
+        &:first-child {
+            margin-top: 0;
+        }
+    } @else {
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+@mixin position-absolute($width: 100%, $height: 100%, $top: 0, $bottom: auto, $left: 0, $right: auto, $z: -1) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    bottom: $bottom;
+    right: $right;
+    width: $width;
+    height: $height;
+    z-index: $z;
+}
+
+/*
+* Dynamic Clamp function
+* Example: font-size: clamped(16px, 18px);
+*/
+
+@function to-rems($px) {
+    $rems: math.div($px, 10px) * 1rem;
+    @return $rems;
+}
+
+@function clamped($min-px, $max-px, $min-bp: 360px, $max-bp: 1772px) {
+    $slope: math.div($max-px - $min-px, $max-bp - $min-bp);
+    $slope-vw: $slope * 100;
+    $intercept-rems: to-rems($min-px - $slope * $min-bp);
+    $min-rems: to-rems($min-px);
+    $max-rems: to-rems($max-px);
+    @return clamp(#{$min-rems}, #{$slope-vw}vw + #{$intercept-rems}, #{$max-rems});
+}

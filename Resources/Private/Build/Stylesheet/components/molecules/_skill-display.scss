@@ -1,0 +1,11 @@
+.ce-skill-display {
+  &__list {
+    display: flex;
+    gap: $col-padding;
+    margin-bottom: -$col-padding;
+
+    .pill {
+      margin-bottom: $col-padding;
+    }
+  }
+}

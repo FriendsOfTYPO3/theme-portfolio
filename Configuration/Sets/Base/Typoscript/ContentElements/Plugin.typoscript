@@ -1,0 +1,11 @@
+plugin.tx_themeportfolio.view {
+    layoutRootPaths {
+        0 = EXT:theme_portfolio/Resources/Private/Templates/Layouts/
+    }
+    partialRootPaths {
+        0 = EXT:theme_portfolio/Resources/Private/Templates/Partials/
+    }
+    templateRootPaths {
+        0 = EXT:form/Resources/Private/Frontend/Templates/
+    }
+}

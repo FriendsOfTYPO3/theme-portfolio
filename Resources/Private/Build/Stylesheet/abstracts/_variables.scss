@@ -1,0 +1,175 @@
+/* ==== Variables ==== */
+
+// Colors
+
+// * CSS variables semantics
+@include css-root-vars() {
+    --color-primary: #75df91;
+    --color-secondary: color-mix(in srgb,var(--color-primary), currentColor 20%);
+    --color-base-background: #444;
+    --color-base-border: #878787;
+    --color-base-text: #fff;
+    --color-base-text-secondary: #e2e2e2;
+    --color-button-text: #ffffff;
+    --color-section-background-light: #585858;
+    --color-section-background-dark: #444;
+    --font-copytext-name: 'Roboto';
+    --font-headline-name: 'Roboto Slab';
+    --color-alert: #ea0808;
+    --color-border: #696967;
+}
+
+$body-bg-color:             var(--color-background);
+
+$colors: (
+    'primary':            var(--color-primary),
+    'secondary':          var(--color-secondary),
+    'base-background':    var(--color-base-background),
+    'base-text':          var(--color-base-text),
+    'section-background-light':          var(--color-section-background-light),
+    'section-background-dark':           var(--color-section-background-dark)
+);
+
+// Typography
+// * base
+$font-size-root:              10px;
+$line-height-base:            1.25;
+
+// Breakpoint Sizes
+$breakpoints: (
+        xs: 0px,
+        sm: 375px,
+        md: 768px,
+        lg: 1024px,
+        xl: 1440px,
+);
+
+// * font-weights
+$font-light:            300;
+$font-regular:          400;
+$font-medium:           500;
+$font-semiBold:         600;
+$font-bold:             700;
+
+// * font sizes
+$font-80:               8rem;
+$font-64:               6.2rem;
+$font-40:               4rem;
+$font-32:               3.2rem;
+$font-28:               2.8rem;
+$font-24:               2.4rem;
+$font-20:               2rem;
+$font-18:               1.8rem;
+$font-16:               1.6rem;
+$font-14:               1.4rem;
+
+// * fix headline sizes
+$font-size-h1:          $font-40;
+$font-size-h2:          $font-32;
+$font-size-h3:          $font-24;
+$font-size-h4:          $font-20;
+$font-size-h5:          $font-18;
+$font-size-h6:          $font-18;
+
+$font-size-h1-lg:       $font-80;
+$font-size-h2-lg:       $font-64;
+$font-size-h3-lg:       $font-40;
+$font-size-h4-lg:       $font-32;
+$font-size-h5-lg:       $font-24;
+$font-size-h6-lg:       $font-20;
+
+@include css-root-vars() {
+    --font-size-h1: #{$font-size-h1};
+    --font-size-h2: #{$font-size-h2};
+    --font-size-h3: #{$font-size-h3};
+    --font-size-h4: #{$font-size-h4};
+    --font-size-h5: #{$font-size-h5};
+    --font-size-h6: #{$font-size-h6};
+
+    @include breakpoint-up(md) {
+        --font-size-h1: #{$font-size-h1-lg};
+        --font-size-h2: #{$font-size-h2-lg};
+        --font-size-h3: #{$font-size-h3-lg};
+        --font-size-h4: #{$font-size-h4-lg};
+        --font-size-h5: #{$font-size-h5-lg};
+        --font-size-h6: #{$font-size-h6-lg};
+    }
+}
+
+@include css-root-vars {
+    --text-sm: #{$font-14};
+    --text-md: #{$font-18};
+    --text-lg: #{$font-24};
+    --text-xl: #{$font-32};
+
+    @include breakpoint-up(md) {
+        --text-lg: #{$font-32};
+        --text-xl: #{$font-40};
+    }
+}
+
+// * semantics
+$base-text-color:             var(--color-base-text);
+$base-text-size:              $font-18;
+$selection-text-color:        var(--color-base-text);
+$selection-background-color:  var(--color-primary);
+
+// Spaces
+// * primitives
+$size-0:            0;
+$size-1:            .1rem;
+$size-2:            .2rem;
+$size-4:            .4rem;
+$size-8:            .8rem;
+$size-12:            1.2rem;
+$size-16:            1.6rem;
+$size-20:            2rem;
+$size-24:            2.4rem;
+$size-32:            3.2rem;
+$size-48:            4.8rem;
+$size-64:            6.4rem;
+$size-96:            9.6rem;
+$size-128:           12.8rem;
+
+// Layout
+// * semantic spacer for sections
+$scroll-padding-top: $size-64;
+
+@include css-root-vars() {
+    --spacer-sm: #{$size-12};
+    --spacer-md: #{$size-32};
+    --spacer-lg: #{$size-64};
+
+    @include breakpoint-up(md) {
+        --spacer-sm: #{$size-24};
+        --spacer-md: #{$size-64};
+        --spacer-lg: #{$size-128};
+    }
+}
+
+// Grid
+// * container
+$container-max-width: 177.2rem;
+$container-padding: $size-20;
+$container-padding-md: $size-32;
+$container-padding-lg: $size-48;
+
+// * rows
+$row-padding: 0rem;
+
+// * columns
+$gridsize: 12;
+$col-padding: $size-12;
+
+// Transitions
+$transition-timing-fast:  150ms;
+$transition-timing-base:  300ms;
+$transition-timing-slow: 500ms;
+
+// Image Ratios
+$ratios: (
+        '16-9':    53.33%,
+        '3-2':     66%,
+        '4-3':     75%,
+        '1-1':     100%,
+);

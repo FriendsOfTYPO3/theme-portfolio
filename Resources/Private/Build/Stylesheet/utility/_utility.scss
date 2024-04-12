@@ -1,0 +1,224 @@
+@use "sass:color";
+
+// Colors
+@each $name, $color in $colors {
+    .bg--#{$name} {
+        --bg-color: #{$color};
+        background-color: var(--bg-color);
+    }
+
+    .text--#{$name} {
+        --text-color: #{$color};
+        color: var(--text-color);
+    }
+}
+
+// Positioning
+
+.text-center.text-center {
+    text-align: center;
+}
+
+.text-right.text-right {
+    text-align: right;
+}
+
+.text-left.text-left {
+    text-align: left;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.row-reverse.row-reverse {
+    display: flex;
+    flex-flow: row-reverse wrap;
+}
+
+.vertical-center {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.justify-content-center {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+@include breakpoint-down(sm) {
+    .xs-column-reverse.xs-column-reverse {
+        display: flex;
+        flex-flow: column;
+        flex-flow: column-reverse;
+    }
+
+    @for $i from 1 through 5 {
+        .xs-order-#{$i} {
+            order: $i;
+        }
+    }
+}
+
+@include breakpoint-down(md) {
+    .sm-column-reverse.sm-column-reverse {
+        display: flex;
+        flex-flow: column;
+        flex-flow: column-reverse;
+    }
+
+    @for $i from 1 through 5 {
+        .sm-order-#{$i} {
+            order: $i;
+        }
+    }
+}
+
+@include breakpoint-down(lg) {
+    .md-column-reverse.md-column-reverse {
+        display: flex;
+        flex-flow: column;
+        flex-flow: column-reverse;
+    }
+
+    @for $i from 1 through 5 {
+        .md-order-#{$i} {
+            order: $i;
+        }
+    }
+}
+
+@include breakpoint-down(xl) {
+    .lg-column-reverse.lg-column-reverse {
+        display: flex;
+        flex-flow: column;
+        flex-flow: column-reverse;
+    }
+
+    @for $i from 1 through 5 {
+        .lg-order-#{$i} {
+            order: $i;
+        }
+    }
+}
+
+// Spacing
+
+.no-margin.no-margin {
+    margin: 0;
+}
+
+.no-padding.no-padding {
+    padding: 0;
+}
+
+.w-100.w-100 {
+    width: 100%;
+}
+
+.h-100.h-100 {
+    height: 100%;
+}
+
+// Display
+.overflow-hidden {
+    overflow: hidden;
+}
+
+@include breakpoint-down(sm) {
+    .xs-hidden.xs-hidden.xs-hidden {
+        display: none;
+    }
+}
+
+@include breakpoint-between(sm, md) {
+    .sm-hidden.sm-hidden.sm-hidden {
+        display: none;
+    }
+}
+
+@include breakpoint-between(md, lg) {
+    .md-hidden.md-hidden.md-hidden {
+        display: none;
+    }
+}
+
+@include breakpoint-between(lg, xl) {
+    .lg-hidden.lg-hidden.lg-hidden {
+        display: none;
+    }
+}
+
+@include breakpoint-up(xl) {
+    .xl-hidden.xl-hidden.xl-hidden {
+        display: none;
+    }
+}
+
+// object-fit
+
+@mixin ratio-paddings {
+    &--auto {
+        height: 100%;
+        padding-bottom: 0;
+    }
+
+    @each $ratio, $value in $ratios {
+        &--#{$ratio} {
+            padding-bottom: $value;
+        }
+    }
+}
+
+.object-fit {
+    position: relative;
+    width: 100%;
+    height: 0;
+    z-index: 1;
+
+    iframe,
+    img,
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    &--contain {
+        iframe,
+        img,
+        video {
+            object-fit: contain;
+        }
+    }
+
+    &.ratio {
+        @include ratio-paddings;
+    }
+
+    @each $breakpoint, $value in $breakpoints {
+        @include breakpoint-up(#{$breakpoint}) {
+            &.ratio--#{$breakpoint} {
+                @include ratio-paddings;
+            }
+        }
+    }
+}
+
+[hidden][hidden][hidden] {
+    display: none;
+}
+
+.lead.lead {
+    font-size: $font-24;
+}
+
+.text-muted.text-muted {
+    color: var(--color-base-text-secondary);
+}

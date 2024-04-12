@@ -1,0 +1,5 @@
+@import 'EXT:form/Configuration/TypoScript/*'
+@import 'EXT:theme_portfolio/Configuration/Sets/Base/Typoscript/*'
+@import 'EXT:theme_portfolio/Configuration/Sets/Base/Typoscript/Lib/*'
+@import 'EXT:theme_portfolio/Configuration/Sets/Base/Typoscript/Navigation/*'
+@import 'EXT:theme_portfolio/Configuration/Sets/Base/Typoscript/ContentElements/*'

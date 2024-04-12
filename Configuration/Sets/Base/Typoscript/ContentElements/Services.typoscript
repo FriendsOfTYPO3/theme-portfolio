@@ -1,0 +1,23 @@
+tt_content.services =< lib.contentElement
+tt_content.services {
+    templateName = Services
+
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        10 {
+            table = tx_portfolio_service
+            pidInList {
+                field = parent
+            }
+            where = (parent=###uid### AND deleted=0 AND hidden=0)
+            orderBy = sorting
+            as = services
+            markers {
+                uid {
+                    field = uid
+                }
+            }
+        }
+    }
+}
+

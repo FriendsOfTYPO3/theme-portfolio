@@ -1,0 +1,19 @@
+.ce-textpic {
+    .image {
+        margin-bottom: $size-24;
+        @include last-no-margin('bottom');
+    }
+
+    + .ce-image,
+    + .ce-textpic,
+    + .ce-text {
+        margin-top: calc(-1 * var(--spacer-lg));
+    }
+
+    @include breakpoint-up(md) {
+        .image {
+            margin-bottom: $size-32;
+            @include last-no-margin('bottom');
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@mixin bodytext() {
+    --text-color: var(--color-base-text);
+    --font-size: #{$font-18};
+
+    margin-top: 0;
+    font-family: var(--font-family-copytext);
+    font-size: var(--font-size);
+    font-weight: $font-regular;
+    line-height: 1.35;
+
+    p,
+    ol,
+    ul,
+    li {
+        color: var(--text-color);
+        margin-bottom: $size-24;
+        font-size: var(--font-size);
+        @include last-no-margin('bottom');
+    }
+
+    @include last-no-margin('bottom');
+}
+
+.content {
+    @include bodytext;
+}

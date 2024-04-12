@@ -1,0 +1,62 @@
+config:
+  projects:
+    detailPid: 9
+    storagePid: 8
+socials:
+  showInFooter: false
+  showInHeader: false
+  showActionButtons: true
+  channels:
+    facebook:
+      link: ''
+    instagram:
+      link: ''
+    threads:
+      link: ''
+    whatsapp:
+      link: ''
+    youtube:
+      link: ''
+    vimeo:
+      link: ''
+    xing:
+      link: 'https://www.xing.com/profile/Georg_Ringer'
+    linkedin:
+      link: 'https://www.linkedin.com/in/georgringer'
+    pinterest:
+      link: ''
+    snapchat:
+      link: ''
+    tiktok:
+      link: ''
+    reddit:
+      link: ''
+    x:
+      link: 'https://twitter.com/georg_ringer'
+    twitch:
+      link: ''
+    tumblr:
+      link: ''
+    github:
+      link: 'https://github.com/georgringer'
+style:
+  variables:
+    primaryColor:
+      key: 'color-primary'
+      value: '#FF8700'
+    secondaryColor:
+      key: 'color-secondary'
+      value: '#ffbb00'
+  data:
+    theme:
+      key: 'theme'
+      value: 'dark'
+    buttonBorderRadius:
+      key: 'button-border-radius'
+      value: 'rounded'
+  font: 'Roboto Slab'
+  copyFont: 'Roboto'
+  contentAlignment: 'left'
+
+logo:
+  path: '/fileadmin/logo/georg-ringer.svg'

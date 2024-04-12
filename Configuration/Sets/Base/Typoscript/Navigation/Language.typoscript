@@ -1,0 +1,7 @@
+page.10.dataProcessing {
+    10 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+    10 {
+        languages = auto
+        as = languages
+    }
+}

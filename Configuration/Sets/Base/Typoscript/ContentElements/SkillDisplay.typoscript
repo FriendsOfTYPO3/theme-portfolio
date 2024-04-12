@@ -1,0 +1,23 @@
+tt_content.skill_display =< lib.contentElement
+tt_content.skill_display {
+    templateName = SkillDisplay
+
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        10 {
+            table = tx_portfolio_skill
+            pidInList {
+                field = parent
+            }
+            where = (parent=###uid### AND deleted=0 AND hidden=0)
+            orderBy = sorting
+            as = skills
+            markers {
+                uid {
+                    field = uid
+                }
+            }
+        }
+    }
+}
+
