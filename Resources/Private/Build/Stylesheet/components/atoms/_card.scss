@@ -12,10 +12,12 @@
     border-radius: var(--button-border-radius);
     border: $size-2 solid var(--color-base-border);
     transition: all .3s ease-in-out;
+
     .project-link{
       display: inline-block;
-      margin-top: $size-16;
+      margin-top: $size-24;
     }
+
     &:hover{
       border: $size-2 solid var(--color-secondary);
       transition: all .3s ease-in-out;
@@ -34,6 +36,7 @@
     margin-bottom: $size-16;
     gap: $size-20;
     row-gap: $size-8;
+    margin-top: $size-24;
   }
 
   &__icon{

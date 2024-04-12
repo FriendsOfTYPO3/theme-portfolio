@@ -1,0 +1,18 @@
+.ce-client-logos {
+  &__item-list {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(130px, auto));
+    justify-content: space-between;
+  }
+
+  &__list-item {
+    height: 14rem;
+    width: 14rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-base-text);
+    padding: 1rem;
+  }
+}

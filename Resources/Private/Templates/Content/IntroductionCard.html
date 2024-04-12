@@ -2,7 +2,7 @@
 <f:section name="Header" />
 <f:section name="Main">
     <f:variable name="contentAlignment" value="{site.settings.all.style.contentAlignment}" />
-    <div class="container">
+    <div class="container {f:if()}">
         <div class="row">
             <f:if condition="{contentAlignment} == 'center'">
                 <f:then>
@@ -14,10 +14,10 @@
                 <f:else>
                     <f:if condition="{image.0}">
                         <f:then>
-                            <div class="col sm-12 md-10 md-offset-1 lg-3 lg-offset-2 xl-2 xl-offset-2">
+                            <div class="col sm-12 md-8 md-offset-2 lg-3 lg-offset-1 xl-2 xl-offset-3">
                                 <f:render section="Image" arguments="{_all}" />
                             </div>
-                            <div class="col sm-12 md-offset-1 md-10 lg-offset-0 lg-6">
+                            <div class="col sm-12 md-offset-2 md-8 lg-offset-0 lg-7 xl-5">
                                 <f:render section="Content" arguments="{_all}" />
                             </div>
                         </f:then>

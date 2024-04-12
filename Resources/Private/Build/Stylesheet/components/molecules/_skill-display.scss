@@ -1,6 +1,7 @@
 .ce-skill-display {
   &__list {
     display: flex;
+    flex-wrap: wrap;
     gap: $col-padding;
     margin-bottom: -$col-padding;
 
