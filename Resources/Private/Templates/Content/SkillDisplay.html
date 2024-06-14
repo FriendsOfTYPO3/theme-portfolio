@@ -5,6 +5,7 @@
 		<div class="row">
 			<div class="col sm-12 md-10 md-offset-1 lg-7 lg-offset-2 xl-6 xl-offset-3">
 				<div class="ce-skill-display__list justify-content-{contentAlignment}">
+					<div class="{f:if(condition: data.show_progress_level, then: 'ce-skill-display__list-progress', else: 'ce-skill-display__list-pills')}">
 					<f:for each="{skills}" as="skill">
 						<f:if condition="{data.show_progress_level}">
 							<f:then>
@@ -20,6 +21,7 @@
 							</f:else>
 						</f:if>
 					</f:for>
+					</div>
 				</div>
 			</div>
 		</div>

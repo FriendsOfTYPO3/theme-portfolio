@@ -77,3 +77,58 @@ section,
   padding-top: var(--spacer-lg);
   padding-bottom: var(--spacer-lg);
 }
+
+
+/* IE and EDGE */
+progress {
+  /* RESETS */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 1rem;
+  background-color: var(--color-base-border);
+  color: var(--color-primary);
+}
+
+/* WEBKIT BROWSERS - CHROME, OPERA AND SAFARI */
+progress::-webkit-progress-bar {
+  background-color: var(--color-base-border);
+  border-radius: 1rem;
+}
+
+progress::-webkit-progress-value {
+  animation: swizzle 15s ease infinite;
+  background: var(--color-primary);
+  background-image: linear-gradient(
+      45deg,
+      var(--color-primary),
+      var(--color-secondary)
+  );
+  background-size: 150% 150%;
+  border-radius: 1rem;
+}
+
+/* MOZILLA FIREFOX */
+progress::-moz-progress-bar {
+  animation: swizzle 15s ease infinite;
+  background: var(--color-primary);
+  background-image: linear-gradient(
+      45deg,
+      var(--color-primary),
+      var(--color-secondary)
+  );
+  background-size: 150% 150%;
+}
+
+@keyframes swizzle {
+  0% {
+    background-position: 0 100%;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}

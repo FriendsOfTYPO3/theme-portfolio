@@ -8,34 +8,8 @@
   }
 
   .progress-bar__indicator {
-    border-radius: 1rem;
     border: 1px solid rgba(var(--color-primary), 0.8);
     float: right;
     width: 75%;
-
-    &::-moz-progress-bar,
-    &::-webkit-progress-value,
-    &::-webkit-progress-bar {
-      background: var(--color-primary);
-      background-image: linear-gradient(
-          45deg,
-          var(--color-primary),
-          var(--color-secondary)
-      );
-      background-size: 150% 150%;
-      animation: swizzle 15s ease infinite;
-    }
-
-    @keyframes swizzle {
-      0% {
-        background-position: 0% 100%;
-      }
-      50% {
-        background-position: 100% 0%;
-      }
-      100% {
-        background-position: 0% 100%;
-      }
-    }
   }
 }
