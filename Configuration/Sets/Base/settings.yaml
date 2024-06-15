@@ -20,9 +20,9 @@ socials:
     vimeo:
       link: ''
     xing:
-      link: 'https://www.xing.com/profile/Georg_Ringer'
+      link: ''
     linkedin:
-      link: 'https://www.linkedin.com/in/georgringer'
+      link: ''
     pinterest:
       link: ''
     snapchat:
@@ -32,13 +32,13 @@ socials:
     reddit:
       link: ''
     x:
-      link: 'https://twitter.com/georg_ringer'
+      link: ''
     twitch:
       link: ''
     tumblr:
       link: ''
     github:
-      link: 'https://github.com/georgringer'
+      link: ''
 style:
   variables:
     primaryColor:
@@ -59,4 +59,4 @@ style:
   contentAlignment: 'left'
 
 logo:
-  path: '/fileadmin/logo/georg-ringer.svg'
+  path: ''
