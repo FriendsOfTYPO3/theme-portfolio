@@ -1,5 +1,12 @@
 .ce-skill-display {
-  &__list {
+  &__list-progress {
+    display: grid;
+    flex-wrap: wrap;
+    gap: $col-padding;
+    margin-bottom: -$col-padding;
+  }
+
+  &__list-pills {
     display: flex;
     flex-wrap: wrap;
     gap: $col-padding;
