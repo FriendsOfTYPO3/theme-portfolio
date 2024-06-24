@@ -1,14 +1,13 @@
 {
   "name": "theme-portfolio",
   "private": true,
-  "version": "0.0.0",
   "license": "GPL-2.0-or-later",
   "scripts": {
     "build": "npm run build:sass && npm run build:ts",
-    "build:sass": "sass ./Resources/Private/Build/Stylesheet/styles.scss:./Resources/Public/Stylesheet/styles.css --style compressed",
+    "build:sass": "sass ./Resources/Private/Build/Stylesheet/styles.scss:./Resources/Public/Stylesheet/styles.css --style expanded",
     "build:ts": "tsc",
     "watch:ts": "tsc --watch",
-    "watch:sass": "sass --watch ./Resources/Private/Build/Stylesheet/styles.scss:./Resources/Public/Stylesheet/styles.css --style compressed"
+    "watch:sass": "sass --watch ./Resources/Private/Build/Stylesheet/styles.scss:./Resources/Public/Stylesheet/styles.css --style expanded"
   },
   "engines": {
     "node": "~18 || ~20",

@@ -22,7 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# Avoid build files for deployment
-Resources/Public/JavaScript/*
-Resources/Public/Stylesheet/*
