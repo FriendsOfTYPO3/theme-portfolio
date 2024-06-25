@@ -34,7 +34,7 @@ The portfolio provides a set of often used content elements for portfolio pages 
 As soon as the setup is done, the portfolio can be adapted to your personal style and needs, this can be done by some basic configurations.
 
 **Example: Theme**
-The portfolio provides two themes: 
+The portfolio provides two themes:
 - dark mode
 - light mode
 
@@ -76,3 +76,11 @@ For adding links to your social media accounts you just need to add links to you
 | Twitch | ```socials.channels.twitch.link``` |
 | tumblr | ```socials.channels.tumblr.link``` |
 | GitHub | ```socials.channels.github.link``` |
+
+## Development Setup
+
+```bash
+ddev start
+ddev composer install
+ddev .build/bin/typo3 setup
+```

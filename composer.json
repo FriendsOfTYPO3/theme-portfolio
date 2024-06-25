@@ -12,21 +12,35 @@
 	],
 	"require": {
 		"php": ">=8.2.0",
-		"typo3/cms-core": "dev-main",
-		"typo3/cms-backend": "dev-main",
-		"typo3/cms-frontend": "dev-main"
+		"typo3/cms-core": "^13.1 || 13.*.*@dev",
+		"typo3/cms-backend": "^13.1 || 13.*.*@dev",
+		"typo3/cms-frontend": "^13.1 || 13.*.*@dev"
 	},
 	"require-dev": {
-		"roave/security-advisories": "dev-master"
+		"roave/security-advisories": "dev-master",
+		"typo3/cms-belog": "^13.1 || 13.*.*@dev",
+		"typo3/cms-install": "^13.1 || 13.*.*@dev"
 	},
-	"extra": {
-		"typo3/cms": {
-			"extension-key": "theme_portfolio"
-		}
-	},
+	"prefer-stable": true,
 	"autoload": {
 		"psr-4": {
 			"FriendsOfTYPO3\\ThemePortfolio\\": "Classes"
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"typo3/class-alias-loader": true,
+			"typo3/cms-composer-installers": true
+		},
+		"bin-dir": ".build/bin",
+		"lock": false,
+		"sort-packages": true,
+		"vendor-dir": ".build/vendor"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "theme_portfolio",
+			"web-dir": ".build/public"
 		}
 	}
 }
