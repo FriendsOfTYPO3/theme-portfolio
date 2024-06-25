@@ -1,31 +1,32 @@
 {
-  "name": "friendsoftypo3/theme-portfolio",
-  "description": "TYPO3 theme for a portfolio website",
-  "type": "typo3-cms-extension",
-  "license": "GPL-2.0-or-later",
-  "authors": [
-    {
-      "name": "fpachowsky",
-      "email": "f.pachowsky@googlemail.com"
-    }
-  ],
-  "require": {
-    "php": ">=8.2.0",
-    "typo3/cms-core": "dev-main",
-    "typo3/cms-backend": "dev-main",
-    "typo3/cms-frontend": "dev-main"
-  },
-  "require-dev": {
-    "roave/security-advisories": "dev-master"
-  },
-  "extra": {
-    "typo3/cms": {
-      "extension-key": "theme_portfolio"
-    }
-  },
-  "autoload": {
-    "psr-4": {
-      "FriendsOfTYPO3\\ThemePortfolio\\": "Classes"
-    }
-  }
+	"name": "friendsoftypo3/theme-portfolio",
+	"description": "TYPO3 theme for a portfolio website",
+	"type": "typo3-cms-extension",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "The TYPO3 Community",
+			"role": "Contributor",
+			"homepage": "https://typo3.org/community/"
+		}
+	],
+	"require": {
+		"php": ">=8.2.0",
+		"typo3/cms-core": "dev-main",
+		"typo3/cms-backend": "dev-main",
+		"typo3/cms-frontend": "dev-main"
+	},
+	"require-dev": {
+		"roave/security-advisories": "dev-master"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "theme_portfolio"
+		}
+	},
+	"autoload": {
+		"psr-4": {
+			"FriendsOfTYPO3\\ThemePortfolio\\": "Classes"
+		}
+	}
 }
