@@ -5,7 +5,7 @@
 
 <header class="header">
     <a href="/" class="header__logo">
-        <f:if condition="{settings.logo}">
+        <f:if condition="{settings.logo.path}">
             <f:then>
                 <img src="{settings.logo.path}" alt="{site.configuration.websiteTitle}"/>
             </f:then>
