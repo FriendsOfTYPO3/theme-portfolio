@@ -8,7 +8,7 @@ In order to setup the extension you need to install the extension with composer 
 - add dependency to ```config.yaml```
 ```
 dependencies:
-  - friendsoftypo3/base
+  - friendsoftypo3/theme-portfolio
 ```
 - ...
 
