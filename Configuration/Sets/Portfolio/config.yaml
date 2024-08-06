@@ -1,2 +1,4 @@
 name: friendsoftypo3/theme-portfolio
 label: Portfolio Theme
+dependencies:
+  - typo3/form

@@ -89,22 +89,22 @@ settings:
     description: 'Link to your Pinterest profile'
     type: string
     default: ''
-  style.variable.primaryColor.key:
+  style.variables.primaryColor.key:
     label: 'Name for the primary color'
     description: 'The name of the variable for the primary color'
     type: string
     default: 'color-primary'
-  style.variable.primaryColor.value:
+  style.variables.primaryColor.value:
     label: 'Color of the primary color'
     description: 'The color value for the primary color'
     type: color
     default: '#ff854d'
-  style.variable.secondaryColor.key:
+  style.variables.secondaryColor.key:
     label: 'Name for the primary color'
     description: 'The name of the variable for the primary color'
     type: string
     default: 'color-primary'
-  style.variable.secondaryColor.value:
+  style.variables.secondaryColor.value:
     label: 'Color of the secondary color'
     description: 'The color value for the secondary color'
     type: color

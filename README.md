@@ -82,5 +82,5 @@ For adding links to your social media accounts you just need to add links to you
 ```bash
 ddev start
 ddev composer install
-ddev .build/bin/typo3 setup
+ddev exec .build/bin/typo3 setup
 ```

@@ -1,0 +1,7 @@
+@import './TypoScript/*'
+@import './TypoScript/Lib/*'
+@import './TypoScript/Navigation/*'
+@import './TypoScript/ContentElements/*'
+
+// page = PAGE
+lib.some = COA
