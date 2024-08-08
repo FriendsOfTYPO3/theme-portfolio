@@ -1,0 +1,42 @@
+{
+	"name": "friendsoftypo3/theme-portfolio-root",
+	"repositories": [
+		{
+			"type": "path",
+			"url": "../",
+			"options": {
+				"symlink": true
+			}
+		}
+	],
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "The TYPO3 Community",
+			"role": "Contributor",
+			"homepage": "https://typo3.org/community/"
+		}
+	],
+	"require": {
+		"friendsoftypo3/theme-portfolio": "dev-main",
+		"typo3/cms-core": "^13.2 || 13.*.*@dev",
+		"typo3/cms-form": "^13.2 || 13.*.*@dev",
+		"typo3/cms-frontend": "^13.2 || 13.*.*@dev"
+	},
+	"require-dev": {
+		"typo3/cms-belog": "^13.2 || 13.*.*@dev",
+		"typo3/cms-info": "^13.2 || 13.*.*@dev",
+		"typo3/cms-install": "^13.2 || 13.*.*@dev",
+		"typo3/cms-lowlevel": "^13.2 || 13.*.*@dev",
+		"typo3/cms-tstemplate": "^13.2 || 13.*.*@dev"
+	},
+	"prefer-stable": true,
+	"config": {
+		"allow-plugins": {
+			"typo3/class-alias-loader": true,
+			"typo3/cms-composer-installers": true
+		},
+		"lock": false,
+		"sort-packages": true
+	}
+}
