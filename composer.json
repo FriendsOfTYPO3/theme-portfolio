@@ -12,15 +12,20 @@
 	],
 	"require": {
 		"php": ">=8.2.0",
-		"typo3/cms-core": "^13.1 || 13.*.*@dev",
-		"typo3/cms-backend": "^13.1 || 13.*.*@dev",
-		"typo3/cms-frontend": "^13.1 || 13.*.*@dev"
+		"typo3/cms-backend": "^13.2 || 13.*.*@dev",
+		"typo3/cms-core": "^13.2 || 13.*.*@dev",
+		"typo3/cms-form": "^13.2 || 13.*.*@dev",
+		"typo3/cms-frontend": "^13.2 || 13.*.*@dev"
 	},
 	"require-dev": {
 		"roave/security-advisories": "dev-master",
-		"typo3/cms-belog": "^13.1 || 13.*.*@dev",
-		"typo3/cms-install": "^13.1 || 13.*.*@dev"
+		"typo3/cms-belog": "^13.2 || 13.*.*@dev",
+		"typo3/cms-info": "^13.2 || 13.*.*@dev",
+		"typo3/cms-install": "^13.2 || 13.*.*@dev",
+		"typo3/cms-lowlevel": "^13.2 || 13.*.*@dev",
+		"typo3/cms-tstemplate": "^13.2 || 13.*.*@dev"
 	},
+	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"autoload": {
 		"psr-4": {
