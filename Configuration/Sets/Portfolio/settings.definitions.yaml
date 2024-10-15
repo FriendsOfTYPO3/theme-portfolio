@@ -1,151 +1,258 @@
+categories:
+  ThemePortfolio:
+    label: 'Portfolio'
+  ThemePortfolio.logo:
+    label: 'Logo'
+    parent: ThemePortfolio
+  ThemePortfolio.config:
+    label: 'Config'
+    parent: ThemePortfolio
+  ThemePortfolio.config.project:
+    label: 'Project'
+    parent: ThemePortfolio.config
+  ThemePortfolio.fonts:
+    label: 'Fonts'
+    parent: ThemePortfolio
+  ThemePortfolio.colors:
+    label: 'Colors'
+    parent: ThemePortfolio
+  ThemePortfolio.styles:
+    label: 'Styles'
+    parent: ThemePortfolio
+  ThemePortfolio.features:
+    label: 'Features'
+    parent: ThemePortfolio
+  ThemePortfolio.socialmedia:
+    label: 'Social Media'
+    parent: ThemePortfolio
+
 settings:
-  socials.showInFooter:
-    label: 'Enable Social Links in Footer'
-    description: 'Enable social links in the Header'
-    type: bool
-    default: true
-  socials.showInHeader:
-    label: 'Enable Social Links in Header'
-    description: 'Enable social links in the Header'
-    type: bool
-    default: true
-  socials.showActionButtons:
-    label: 'Enable Social Links as floating action buttons'
-    description: 'Enable social links as floating action buttons'
-    type: bool
-    default: true
-  socials.channels.facebook.link:
-    label: 'Facebook Link'
-    description: 'Link to your Facebook profile'
-    type: string
-    default: ''
-  socials.channels.instagram.link:
-    label: 'Instagram Link'
-    description: 'Link to your Instagram profile'
-    type: string
-    default: ''
-  socials.channels.threads.link:
-    label: 'Threads Link'
-    description: 'Link to your Threads profile'
-    type: string
-    default: ''
-  socials.channels.whatsapp.link:
-    label: 'Threads Link'
-    description: 'Link to your Whatsapp channel'
-    type: string
-    default: ''
-  socials.channels.youtube.link:
-    label: 'Youtube Link'
-    description: 'Link to your Youtube channel'
-    type: string
-    default: ''
-  socials.channels.vimeo.link:
-    label: 'Vimeo Link'
-    description: 'Link to your Vimeo channel'
-    type: string
-    default: ''
-  socials.channels.xing.link:
-    label: 'XING Link'
-    description: 'Link to your XING profile'
-    type: string
-    default: ''
-  socials.channels.linkedin.link:
-    label: 'LinkedIn Link'
-    description: 'Link to your LinkedIn profile'
-    type: string
-    default: ''
-  socials.channels.snapchat.link:
-    label: 'Snapchat Link'
-    description: 'Link to your Snapchat profile'
-    type: string
-    default: ''
-  socials.channels.tiktok.link:
-    label: 'TikTok Link'
-    description: 'Link to your TikTok channel'
-    type: string
-    default: ''
-  socials.channels.reddit.link:
-    label: 'Reddit Link'
-    description: 'Link to your Reddit profile'
-    type: string
-    default: ''
-  socials.channels.x.link:
-    label: 'X/Twitter Link'
-    description: 'Link to your X/Twitter profile'
-    type: string
-    default: ''
-  socials.channels.twitch.link:
-    label: 'Twitch Link'
-    description: 'Link to your Twitch channel'
-    type: string
-    default: ''
-  socials.channels.tumblr.link:
-    label: 'Tumblr Link'
-    description: 'Link to your Tumblr profile'
-    type: string
-    default: ''
-  socials.channels.pinterest.link:
-    label: 'Pinterest Link'
-    description: 'Link to your Pinterest profile'
-    type: string
-    default: ''
-  style.variables.primaryColor.key:
-    label: 'Name for the primary color'
-    description: 'The name of the variable for the primary color'
-    type: string
-    default: 'color-primary'
-  style.variables.primaryColor.value:
-    label: 'Color of the primary color'
-    description: 'The color value for the primary color'
-    type: color
-    default: '#ff854d'
-  style.variables.secondaryColor.key:
-    label: 'Name for the primary color'
-    description: 'The name of the variable for the primary color'
-    type: string
-    default: 'color-primary'
-  style.variables.secondaryColor.value:
-    label: 'Color of the secondary color'
-    description: 'The color value for the secondary color'
-    type: color
-    default: '#ff854d'
-  style.data.theme.key:
-    label: 'Name for the theme data attribute'
-    description: 'The name of the variable for the theme data attribute'
-    type: string
-    default: 'theme'
-  style.data.theme.value:
-    label: 'Theme'
-    description: 'The chosen theme'
-    type: string
-    default: dark
-  style.data.buttonBorderRadius.key:
-    label: 'Name for the button border radius data attribute'
-    description: 'The name of the variable for the button border radius data attribute'
-    type: string
-    default: 'button-border-radius'
-  style.data.buttonBorderRadius.value:
-    label: 'Radius of the button border'
-    description: 'The radius of the button border'
-    type: string
-    default: none
-  style.font:
-    label: 'Font'
-    description: 'The font for the website'
-    type: string
-    default: 'Roboto Slab'
-  style.copyFont:
-    label: 'Copy Font'
-    description: 'The font for the copy text'
-    type: string
-    default: 'Roboto'
-  style.contentAlignment:
-    label: 'Content Alignment'
-    description: 'The alignment of the content'
-    type: string
-    default: 'center'
+
+  # Logo
   logo.path:
     label: 'Logo Path'
     description: 'Fileadmin path to the logo file'
+    category: ThemePortfolio.logo
     type: string
-    default: '/fileadmin/logo/typo3_logo.svg'
+    default: ''
+
+  # Config
+  config.projects.detailPid:
+    label: 'Detail Page ID'
+    category: ThemePortfolio.config.project
+    type: number
+    default: 0
+
+  config.projects.storagePid:
+    label: 'Storage Page ID'
+    category: ThemePortfolio.config.project
+    type: number
+    default: 0
+
+  # Fonts
+  style.font:
+    label: 'Font'
+    description: 'The font for the website'
+    category: ThemePortfolio.fonts
+    type: string
+    default: 'Roboto Slab'
+
+  style.copyFont:
+    label: 'Copy Font'
+    description: 'The font for the copy text'
+    category: ThemePortfolio.fonts
+    type: string
+    default: 'Roboto'
+
+  # Colors
+  style.variables.primaryColor.key:
+    label: 'Name for the primary color'
+    description: 'The name of the variable for the primary color'
+    category: ThemePortfolio.colors
+    type: string
+    default: 'color-primary'
+
+  style.variables.primaryColor.value:
+    label: 'Color of the primary color'
+    description: 'The color value for the primary color'
+    category: ThemePortfolio.colors
+    type: color
+    default: '#ff854d'
+
+  style.variables.secondaryColor.key:
+    label: 'Name for the primary color'
+    description: 'The name of the variable for the primary color'
+    category: ThemePortfolio.colors
+    type: string
+    default: 'color-primary'
+
+  style.variables.secondaryColor.value:
+    label: 'Color of the secondary color'
+    description: 'The color value for the secondary color'
+    category: ThemePortfolio.colors
+    type: color
+    default: '#ff854d'
+
+  # Styles
+  style.data.theme.key:
+    label: 'Name for the theme data attribute'
+    description: 'The name of the variable for the theme data attribute'
+    category: ThemePortfolio.styles
+    type: string
+    default: 'theme'
+
+  style.data.theme.value:
+    label: 'Theme'
+    description: 'The chosen theme'
+    category: ThemePortfolio.styles
+    type: string
+    default: dark
+
+  style.data.buttonBorderRadius.key:
+    label: 'Name for the button border radius data attribute'
+    description: 'The name of the variable for the button border radius data attribute'
+    category: ThemePortfolio.styles
+    type: string
+    default: 'button-border-radius'
+
+  style.data.buttonBorderRadius.value:
+    label: 'Radius of the button border'
+    description: 'The radius of the button border'
+    category: ThemePortfolio.styles
+    type: string
+    default: none
+
+  style.contentAlignment:
+    label: 'Content Alignment'
+    description: 'The alignment of the content'
+    category: ThemePortfolio.styles
+    type: string
+    default: 'center'
+
+  # Features
+  socials.showInFooter:
+    label: 'Enable Social Links in Footer'
+    description: 'Enable social links in the Header'
+    category: ThemePortfolio.features
+    type: bool
+    default: true
+
+  socials.showInHeader:
+    label: 'Enable Social Links in Header'
+    description: 'Enable social links in the Header'
+    category: ThemePortfolio.features
+    type: bool
+    default: true
+
+  socials.showActionButtons:
+    label: 'Enable Social Links as floating action buttons'
+    description: 'Enable social links as floating action buttons'
+    category: ThemePortfolio.features
+    type: bool
+    default: true
+
+  # Social Media
+  socials.channels.facebook.link:
+    label: 'Facebook Link'
+    description: 'Link to your Facebook profile'
+    category: ThemePortfolio.socialmedia
+    type: string
+    default: ''
+
+  socials.channels.instagram.link:
+    label: 'Instagram Link'
+    description: 'Link to your Instagram profile'
+    category: ThemePortfolio.socialmedia
+    type: string
+    default: ''
+
+  socials.channels.threads.link:
+    label: 'Threads Link'
+    description: 'Link to your Threads profile'
+    category: ThemePortfolio.socialmedia
+    type: string
+    default: ''
+
+  socials.channels.whatsapp.link:
+    label: 'Threads Link'
+    description: 'Link to your Whatsapp channel'
+    category: ThemePortfolio.socialmedia
+    type: string
+    default: ''
+
+  socials.channels.youtube.link:
+    label: 'Youtube Link'
+    description: 'Link to your Youtube channel'
+    category: ThemePortfolio.socialmedia
+    type: string
+    default: ''
+
+  socials.channels.vimeo.link:
+    label: 'Vimeo Link'
+    description: 'Link to your Vimeo channel'
+    category: ThemePortfolio.socialmedia
+    type: string
+    default: ''
+
+  socials.channels.xing.link:
+    label: 'XING Link'
+    description: 'Link to your XING profile'
+    category: ThemePortfolio.socialmedia
+    type: string
+    default: ''
+
+  socials.channels.linkedin.link:
+    label: 'LinkedIn Link'
+    description: 'Link to your LinkedIn profile'
+    category: ThemePortfolio.socialmedia
+    type: string
+    default: ''
+
+  socials.channels.snapchat.link:
+    label: 'Snapchat Link'
+    description: 'Link to your Snapchat profile'
+    category: ThemePortfolio.socialmedia
+    type: string
+    default: ''
+
+  socials.channels.tiktok.link:
+    label: 'TikTok Link'
+    description: 'Link to your TikTok channel'
+    category: ThemePortfolio.socialmedia
+    type: string
+    default: ''
+
+  socials.channels.reddit.link:
+    label: 'Reddit Link'
+    description: 'Link to your Reddit profile'
+    category: ThemePortfolio.socialmedia
+    type: string
+    default: ''
+
+  socials.channels.x.link:
+    label: 'X/Twitter Link'
+    description: 'Link to your X/Twitter profile'
+    category: ThemePortfolio.socialmedia
+    type: string
+    default: ''
+
+  socials.channels.twitch.link:
+    label: 'Twitch Link'
+    description: 'Link to your Twitch channel'
+    category: ThemePortfolio.socialmedia
+    type: string
+    default: ''
+
+  socials.channels.tumblr.link:
+    label: 'Tumblr Link'
+    description: 'Link to your Tumblr profile'
+    category: ThemePortfolio.socialmedia
+    type: string
+    default: ''
+
+  socials.channels.pinterest.link:
+    label: 'Pinterest Link'
+    description: 'Link to your Pinterest profile'
+    category: ThemePortfolio.socialmedia
+    type: string
+    default: ''
