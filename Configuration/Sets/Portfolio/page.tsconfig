@@ -1,1 +1,20 @@
-@import 'EXT:theme_portfolio/Configuration/Sets/Base/PageTS/*'
+TCEFORM.tt_content.CType {
+  removeItems := addToList(textmedia)
+  removeItems := addToList(bullets)
+  removeItems := addToList(div)
+  removeItems := addToList(html)
+  removeItems := addToList(menu_abstract)
+  removeItems := addToList(menu_categorized_content)
+  removeItems := addToList(menu_categorized_pages)
+  removeItems := addToList(menu_pages)
+  removeItems := addToList(menu_recently_updated)
+  removeItems := addToList(menu_related_pages)
+  removeItems := addToList(menu_section)
+  removeItems := addToList(menu_section_pages)
+  removeItems := addToList(menu_sitemap)
+  removeItems := addToList(menu_sitemap_pages)
+  removeItems := addToList(menu_subpages)
+  removeItems := addToList(shortcut)
+  removeItems := addToList(table)
+  removeItems := addToList(uploads)
+}
