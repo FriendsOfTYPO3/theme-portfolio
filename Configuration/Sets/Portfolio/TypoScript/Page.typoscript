@@ -3,19 +3,10 @@ page {
     10 = PAGEVIEW
     10.paths.0 = EXT:theme_portfolio/Resources/Private/Templates/
 
-    css_inlinestyle >
-    cssInline >
-    includeCSS >
-    includeCSSLibs >
     includeCSS {
       styles = EXT:theme_portfolio/Resources/Public/Stylesheet/styles.css
     }
 
-    includeJS >
-    includeJSLibs >
-    jsInline >
-    includeJSFooter >
-    includeJSFooterlibs >
     includeJSFooter {
       app = EXT:theme_portfolio/Resources/Public/JavaScript/app.js
       app {
