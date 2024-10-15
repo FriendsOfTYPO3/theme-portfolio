@@ -65,28 +65,14 @@ settings:
     default: 'Roboto'
 
   # Colors
-  style.variables.primaryColor.key:
-    label: 'Name for the primary color'
-    description: 'The name of the variable for the primary color'
-    category: ThemePortfolio.colors
-    type: string
-    default: 'color-primary'
-
-  style.variables.primaryColor.value:
+  style.primaryColor:
     label: 'Color of the primary color'
     description: 'The color value for the primary color'
     category: ThemePortfolio.colors
     type: color
     default: '#ff854d'
 
-  style.variables.secondaryColor.key:
-    label: 'Name for the primary color'
-    description: 'The name of the variable for the primary color'
-    category: ThemePortfolio.colors
-    type: string
-    default: 'color-primary'
-
-  style.variables.secondaryColor.value:
+  style.secondaryColor:
     label: 'Color of the secondary color'
     description: 'The color value for the secondary color'
     category: ThemePortfolio.colors
@@ -94,32 +80,25 @@ settings:
     default: '#ff854d'
 
   # Styles
-  style.data.theme.key:
-    label: 'Name for the theme data attribute'
-    description: 'The name of the variable for the theme data attribute'
-    category: ThemePortfolio.styles
-    type: string
-    default: 'theme'
-
-  style.data.theme.value:
+  style.theme:
     label: 'Theme'
     description: 'The chosen theme'
     category: ThemePortfolio.styles
     type: string
+    enum:
+      'light': 'Light'
+      'dark': 'Dark'
     default: dark
 
-  style.data.buttonBorderRadius.key:
-    label: 'Name for the button border radius data attribute'
-    description: 'The name of the variable for the button border radius data attribute'
-    category: ThemePortfolio.styles
-    type: string
-    default: 'button-border-radius'
-
-  style.data.buttonBorderRadius.value:
+  style.buttonBorderRadius:
     label: 'Radius of the button border'
     description: 'The radius of the button border'
     category: ThemePortfolio.styles
     type: string
+    enum:
+      'none': 'None'
+      'rounded': 'Rounded'
+      'round': 'Round'
     default: none
 
   style.contentAlignment:
@@ -127,6 +106,10 @@ settings:
     description: 'The alignment of the content'
     category: ThemePortfolio.styles
     type: string
+    enum:
+      'center': 'Center'
+      'left': 'Left'
+      'right': 'Right'
     default: 'center'
 
   # Features

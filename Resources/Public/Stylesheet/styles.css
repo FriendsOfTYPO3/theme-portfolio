@@ -96,6 +96,7 @@ body {
   font-family: var(--font-family-copytext);
   font-weight: 400;
   background-color: var(--color-base-background);
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

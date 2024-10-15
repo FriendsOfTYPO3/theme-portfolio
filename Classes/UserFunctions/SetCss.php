@@ -21,9 +21,8 @@ final class SetCss
     {
         $settings = $this->getSettings($request);
         $styleVariables = [];
-        foreach ($settings['style']['data'] as $item) {
-            $styleVariables[] = 'data-' . $item['key'] . '="' . $item['value'] . '"';
-        }
+        $styleVariables[] = 'data-theme="' . $settings['style']['theme'] . '"';
+        $styleVariables[] = 'data-button-border-radius="' . $settings['style']['buttonBorderRadius'] . '"';
 
         return ' ' . implode(' ', $styleVariables);
     }
@@ -32,12 +31,11 @@ final class SetCss
     {
         $settings = $this->getSettings($request);
         $properties = [];
-        foreach ($settings['style']['variables'] as $item) {
-            $properties[$item['key']] = $item['value'];
-        }
 
-        $properties['font-family-heading']  = '\'' . $settings['style']['font'] . '\'';
-        $properties['font-family-copytext'] = '\'' . $settings['style']['copyFont'] . '\'';
+        $properties['color-primary'] = $settings['style']['primaryColor'];
+        $properties['color-secondary'] = $settings['style']['secondaryColor'];
+        $properties['font-family-heading']  = $settings['style']['font'];
+        $properties['font-family-copytext'] = $settings['style']['copyFont'];
 
         $output = [];
         $output[] = '<style>';
