@@ -1,10 +1,10 @@
 <div class="container icons-list">
-	<f:for each="{socials}" as="socialItem" key="label">
-		<f:if condition="{socialItem.link}">
-			<f:comment><!--The Icons/Classes needs to be named like the key in die Base/settings.yaml--></f:comment>
-			<a href="{socialItem.link}" title="{label}" class="icons-list__item">
-				<f:render partial="Content/Atoms/Icon" arguments="{ name: label}" />
-			</a>
-		</f:if>
-	</f:for>
+    <f:for each="{socials}" as="socialItem" key="label">
+        <f:if condition="{socialItem.link}">
+            <f:comment><!--The Icons/Classes needs to be named like the key in die Base/settings.yaml--></f:comment>
+            <a href="{socialItem.link}" title="{label}" class="icons-list__item">
+                <f:render partial="Content/Atoms/Icon" arguments="{ name: label}" />
+            </a>
+        </f:if>
+    </f:for>
 </div>

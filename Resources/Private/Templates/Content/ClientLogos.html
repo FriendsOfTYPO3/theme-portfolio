@@ -1,16 +1,16 @@
 <f:layout name="ContentBlock" />
 <f:section name="Main">
 
-	<div class="container">
-		<div class="row">
-			<div class="col sm-12 md-10 md-offset-1 lg-7 lg-offset-2 xl-8 xl-offset-2">
-				<div class="row ce-client-logos__item-list justify-content-{contentAlignment}">
-					<f:for each="{client_logos}" as="client" key="label">
-						<portfolio:inlineSvg image="{client.images.0}" class="ce-client-logos__list-item"></portfolio:inlineSvg>
-					</f:for>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="row">
+            <div class="col sm-12 md-10 md-offset-1 lg-7 lg-offset-2 xl-8 xl-offset-2">
+                <div class="row ce-client-logos__item-list justify-content-{contentAlignment}">
+                    <f:for each="{client_logos}" as="client" key="label">
+                        <portfolio:inlineSvg image="{client.images.0}" class="ce-client-logos__list-item"></portfolio:inlineSvg>
+                    </f:for>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </f:section>
