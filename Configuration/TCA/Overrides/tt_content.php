@@ -1,5 +1,12 @@
 <?php
 
+/*
+ * This file is part of the package friendsoftypo3/theme-portfolio.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
@@ -52,27 +59,27 @@ $GLOBALS['TCA']['tt_content']['columns']['header_style'] = [
             ['label' => '', 'value' => ''],
             [
                 'label' => 'LLL:EXT:theme_portfolio/Resources/Private/Language/locallang_db.xlf:field.header_style.h1',
-                'value' => 'h1'
+                'value' => 'h1',
             ],
             [
                 'label' => 'LLL:EXT:theme_portfolio/Resources/Private/Language/locallang_db.xlf:field.header_style.h2',
-                'value' => 'h2'
+                'value' => 'h2',
             ],
             [
                 'label' => 'LLL:EXT:theme_portfolio/Resources/Private/Language/locallang_db.xlf:field.header_style.h3',
-                'value' => 'h3'
+                'value' => 'h3',
             ],
             [
                 'label' => 'LLL:EXT:theme_portfolio/Resources/Private/Language/locallang_db.xlf:field.header_style.h4',
-                'value' => 'h4 '
+                'value' => 'h4 ',
             ],
             [
                 'label' => 'LLL:EXT:theme_portfolio/Resources/Private/Language/locallang_db.xlf:field.header_style.h5',
-                'value' => 'h5'
+                'value' => 'h5',
             ],
             [
                 'label' => 'LLL:EXT:theme_portfolio/Resources/Private/Language/locallang_db.xlf:field.header_style.h6',
-                'value' => 'h6'
+                'value' => 'h6',
             ],
         ],
     ],
@@ -86,11 +93,11 @@ $GLOBALS['TCA']['tt_content']['columns']['background'] = [
         'items' => [
             [
                 'label' => 'LLL:EXT:theme_portfolio/Resources/Private/Language/locallang_db.xlf:field.background.dark',
-                'value' => 'bg--section-background-dark'
+                'value' => 'bg--section-background-dark',
             ],
             [
                 'label' => 'LLL:EXT:theme_portfolio/Resources/Private/Language/locallang_db.xlf:field.background.light',
-                'value' => 'bg--section-background-light'
+                'value' => 'bg--section-background-light',
             ],
         ],
     ],

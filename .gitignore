@@ -1,8 +1,6 @@
-/*.idea
-/.build/*
-/.cache
-/.fleet
-/composer.lock
-/config
-/node_modules/
-/var
+.build/
+node_modules/
+config/
+var/
+composer.lock
+*.cache

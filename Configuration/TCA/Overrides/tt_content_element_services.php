@@ -2,6 +2,13 @@
 
 declare(strict_types=1);
 
+/*
+ * This file is part of the package friendsoftypo3/theme-portfolio.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 defined('TYPO3') or die();
@@ -35,14 +42,14 @@ $GLOBALS['TCA']['tt_content']['types']['services'] = [
         'header' => [
             'config' => [
                 'required' => true,
-            ]
+            ],
         ],
         'header_layout' => [
             'config' => [
-                'default' => 2
-            ]
+                'default' => 2,
+            ],
         ],
-    ]
+    ],
 ];
 
 $GLOBALS['TCA']['tt_content']['columns']['services'] = [
@@ -53,7 +60,7 @@ $GLOBALS['TCA']['tt_content']['columns']['services'] = [
         'foreign_field' => 'parent',
         'foreign_sortby' => 'sorting',
         'appearance' => [
-            'useSortable' => true
+            'useSortable' => true,
         ],
-    ]
+    ],
 ];

@@ -1,11 +1,15 @@
 <?php
 
+/*
+ * This file is part of the package friendsoftypo3/theme-portfolio.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 namespace FriendsOfTYPO3\ThemePortfolio\Domain\Model;
 
-use Symfony\Component\Config\Resource\FileResource;
-use TYPO3\CMS\Core\Resource\FileReference;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
-use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 class Link extends AbstractEntity
 {

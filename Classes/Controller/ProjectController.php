@@ -1,17 +1,25 @@
 <?php
 
+/*
+ * This file is part of the package friendsoftypo3/theme-portfolio.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 namespace FriendsOfTYPO3\ThemePortfolio\Controller;
 
-use Psr\Http\Message\ResponseInterface;
 use FriendsOfTYPO3\ThemePortfolio\Domain\Model\Project;
-use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use FriendsOfTYPO3\ThemePortfolio\Domain\Repository\ProjectRepository;
+use Psr\Http\Message\ResponseInterface;
+use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 class ProjectController extends ActionController
 {
     public function __construct(
         protected ProjectRepository $projectRepository
-    ) {}
+    ) {
+    }
 
     public function listAction(): ResponseInterface
     {
@@ -22,7 +30,7 @@ class ProjectController extends ActionController
 
     public function showAction(Project $project): ResponseInterface
     {
-        if(!$project->getShowDetailPage()) {
+        if (!$project->getShowDetailPage()) {
             throw new \TYPO3\CMS\Core\Exception('Project does not have a detail page');
         }
 

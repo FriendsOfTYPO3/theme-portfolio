@@ -2,6 +2,13 @@
 
 declare(strict_types=1);
 
+/*
+ * This file is part of the package friendsoftypo3/theme-portfolio.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 defined('TYPO3') or die();
@@ -36,8 +43,8 @@ $GLOBALS['TCA']['tt_content']['types']['project_teaser'] = [
     'columnsOverrides' => [
         'header_layout' => [
             'config' => [
-                'default' => 2
-            ]
+                'default' => 2,
+            ],
         ],
-    ]
+    ],
 ];

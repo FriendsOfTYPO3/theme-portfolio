@@ -1,6 +1,13 @@
 <?php
 declare(strict_types=1);
 
+/*
+ * This file is part of the package friendsoftypo3/theme-portfolio.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 defined('TYPO3') or die();
@@ -37,23 +44,23 @@ $GLOBALS['TCA']['tt_content']['types']['introduction_card'] = [
         'header' => [
             'config' => [
                 'required' => true,
-            ]
+            ],
         ],
         'header_layout' => [
             'config' => [
-                'default' => 1
-            ]
+                'default' => 1,
+            ],
         ],
         'bodytext' => [
             'config' => [
                 'enableRichtext' => true,
-                'richtextConfiguration' => 'minimal'
-            ]
+                'richtextConfiguration' => 'minimal',
+            ],
         ],
         'image' => [
             'config' => [
-                'maxitems' => 1
-            ]
-        ]
-    ]
+                'maxitems' => 1,
+            ],
+        ],
+    ],
 ];

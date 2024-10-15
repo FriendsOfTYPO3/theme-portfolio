@@ -1,6 +1,11 @@
 <?php
 
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+/*
+ * This file is part of the package friendsoftypo3/theme-portfolio.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
 
 return [
     'ctrl' => [
@@ -89,7 +94,7 @@ return [
                 'foreign_field' => 'parent',
                 'foreign_table' => 'sys_file_reference',
                 'allowed' => 'common-media-types',
-                'maxitems' => 10
+                'maxitems' => 10,
             ],
         ],
     ],

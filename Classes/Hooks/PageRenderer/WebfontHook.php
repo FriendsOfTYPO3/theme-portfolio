@@ -1,6 +1,13 @@
 <?php
 declare(strict_types = 1);
 
+/*
+ * This file is part of the package friendsoftypo3/theme-portfolio.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 namespace FriendsOfTYPO3\ThemePortfolio\Hooks\PageRenderer;
 
 use Psr\Http\Message\ServerRequestInterface;
@@ -31,18 +38,19 @@ class WebfontHook
         $pagerenderer->addCssFile('EXT:theme_portfolio/Resources/Public/Fonts/roboto-slab/webfont.css');
     }
 
-    protected function includeFont($name, $pagerenderer) {
+    protected function includeFont($name, $pagerenderer)
+    {
         $includePath = $this->findIncludePath($name);
         if ($includePath) {
             $pagerenderer->addCssFile($includePath);
         }
     }
 
-    protected function findIncludePath($name): ?string 
+    protected function findIncludePath($name): ?string
     {
         $name = strtolower($name);
         $name = str_replace(' ', '-', $name);
-        $filename = 'EXT:theme_portfolio/Resources/Public/Fonts/' . $name .'/webfont.css';
+        $filename = 'EXT:theme_portfolio/Resources/Public/Fonts/' . $name . '/webfont.css';
         if (file_exists(GeneralUtility::getFileAbsFileName($filename))) {
             return $filename;
         }

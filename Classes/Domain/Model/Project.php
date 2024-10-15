@@ -2,6 +2,13 @@
 
 declare(strict_types=1);
 
+/*
+ * This file is part of the package friendsoftypo3/theme-portfolio.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 namespace FriendsOfTYPO3\ThemePortfolio\Domain\Model;
 
 use TYPO3\CMS\Extbase\Domain\Model\Category;
@@ -82,7 +89,7 @@ class Project extends AbstractEntity
     {
         $this->images->attach($image);
     }
-    
+
     public function removeImage(FileReference $image): void
     {
         $this->images->detach($image);
@@ -127,6 +134,5 @@ class Project extends AbstractEntity
     {
         $this->categories->detach($categoryToRemove);
     }
-
 
 }

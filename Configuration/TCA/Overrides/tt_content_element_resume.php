@@ -1,6 +1,13 @@
 <?php
 declare(strict_types=1);
 
+/*
+ * This file is part of the package friendsoftypo3/theme-portfolio.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 defined('TYPO3') or die();
@@ -36,16 +43,16 @@ $GLOBALS['TCA']['tt_content']['types']['resume'] = [
         'header' => [
             'config' => [
                 'required' => true,
-            ]
+            ],
         ],
-    ]
+    ],
 ];
 
 $GLOBALS['TCA']['tt_content']['columns']['additional_header'] = [
     'label' => 'LLL:EXT:theme_portfolio/Resources/Private/Language/locallang_db.xlf:field.additional_header',
     'config' => [
         'type' => 'input',
-    ]
+    ],
 ];
 
 $GLOBALS['TCA']['tt_content']['columns']['resume_items'] = [
@@ -55,9 +62,9 @@ $GLOBALS['TCA']['tt_content']['columns']['resume_items'] = [
         'foreign_table' => 'tx_portfolio_resume_item',
         'foreign_field' => 'parent',
         'foreign_match_fields' => [
-            'is_additional_item' => 0
+            'is_additional_item' => 0,
         ],
-    ]
+    ],
 ];
 
 $GLOBALS['TCA']['tt_content']['columns']['additional_resume_items'] = [
@@ -68,10 +75,10 @@ $GLOBALS['TCA']['tt_content']['columns']['additional_resume_items'] = [
         'foreign_field' => 'parent',
         'foreign_sortby' => 'sorting',
         'foreign_match_fields' => [
-            'is_additional_item' => 1
+            'is_additional_item' => 1,
         ],
         'appearance' => [
-            'useSortable' => true
+            'useSortable' => true,
         ],
-    ]
+    ],
 ];

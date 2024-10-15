@@ -1,6 +1,13 @@
 <?php
 declare(strict_types=1);
 
+/*
+ * This file is part of the package friendsoftypo3/theme-portfolio.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 defined('TYPO3') or die();
@@ -19,7 +26,6 @@ ExtensionManagementUtility::addTcaSelectItem(
     'after'
 );
 
-
 $GLOBALS['TCA']['tt_content']['types']['skill_display'] = [
     'showitem' => '
         --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
@@ -36,14 +42,14 @@ $GLOBALS['TCA']['tt_content']['types']['skill_display'] = [
         'header' => [
             'config' => [
                 'required' => true,
-            ]
+            ],
         ],
         'header_layout' => [
             'config' => [
-                'default' => 2
-            ]
+                'default' => 2,
+            ],
         ],
-    ]
+    ],
 ];
 
 $GLOBALS['TCA']['tt_content']['columns']['skills'] = [
@@ -55,15 +61,14 @@ $GLOBALS['TCA']['tt_content']['columns']['skills'] = [
         'foreign_field' => 'parent',
         'foreign_sortby' => 'sorting',
         'appearance' => [
-            'useSortable' => true
+            'useSortable' => true,
         ],
-    ]
+    ],
 ];
 
 $GLOBALS['TCA']['tt_content']['columns']['show_progress_level'] = [
     'label' => 'LLL:EXT:theme_portfolio/Resources/Private/Language/locallang_db.xlf:content_element.skill_display.show_progress_level',
     'config' => [
         'type' => 'check',
-    ]
+    ],
 ];
-
