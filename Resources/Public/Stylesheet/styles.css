@@ -97,6 +97,8 @@ body {
   font-weight: 400;
   background-color: var(--color-base-background);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -1436,6 +1438,7 @@ h6:last-child, .h6:last-child {
 }
 
 .footer {
+  margin-top: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

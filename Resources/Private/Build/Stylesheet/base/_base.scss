@@ -26,6 +26,8 @@ body {
   font-weight: $font-regular;
   background-color: var(--color-base-background);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
