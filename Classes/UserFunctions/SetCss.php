@@ -27,28 +27,6 @@ final class SetCss
         return ' ' . implode(' ', $styleVariables);
     }
 
-    public function getCssForHeader(string $content, array $conf, ServerRequestInterface $request): string
-    {
-        $settings = $this->getSettings($request);
-        $properties = [];
-
-        $properties['color-primary'] = $settings['style']['primaryColor'];
-        $properties['color-secondary'] = $settings['style']['secondaryColor'];
-        $properties['font-family-heading']  = $settings['style']['font'];
-        $properties['font-family-copytext'] = $settings['style']['copyFont'];
-
-        $output = [];
-        $output[] = '<style>';
-        $output[] = ':root, * {';
-        foreach ($properties as $propertyKey => $propertyValue) {
-            $output[] = '--' . $propertyKey . ': ' . $propertyValue . ';';
-        }
-        $output[] = '}';
-        $output[] = '</style>';
-
-        return implode(PHP_EOL, $output);
-    }
-
     protected function getSettings(ServerRequestInterface $request): array
     {
         return $request->getAttribute('site')->getConfiguration()['settings'];

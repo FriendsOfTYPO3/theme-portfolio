@@ -9,6 +9,7 @@ declare(strict_types=1);
  */
 
 use FriendsOfTYPO3\ThemePortfolio\Controller\ProjectController;
+use FriendsOfTYPO3\ThemePortfolio\Hooks\PageRenderer\CustomStyleHook;
 use FriendsOfTYPO3\ThemePortfolio\Hooks\PageRenderer\WebfontHook;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
@@ -47,6 +48,8 @@ ExtensionUtility::configurePlugin(
     ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 );
 
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_pagerenderer.php']['render-preProcess'][CustomStyleHook::class]
+    = CustomStyleHook::class . '->execute';
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_pagerenderer.php']['render-preProcess'][WebfontHook::class]
     = WebfontHook::class . '->execute';
 
