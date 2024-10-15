@@ -9,12 +9,8 @@
     "watch:ts": "tsc --watch",
     "watch:sass": "sass --watch ./Resources/Private/Build/Stylesheet/styles.scss:./Resources/Public/Stylesheet/styles.css --style expanded"
   },
-  "engines": {
-    "node": "~18 || ~20",
-    "npm": ">=9.0.0 <11.0.0"
-  },
   "devDependencies": {
-    "sass": "^1.74.1",
-    "typescript": "^5.4.4"
+    "sass": "^1.79.5",
+    "typescript": "^5.6.3"
   }
 }
