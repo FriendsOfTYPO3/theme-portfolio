@@ -45,10 +45,10 @@ In the following table all options for the sets configration are shown.
 
 | Identifier    | Description                 | Default  | Possible Options             |
 |---------------|-----------------------------|----------|------------------------------|
-| ```style.data.theme.value``` | For defining the base theme of the whole website and all content elements |```dark```|```dark```, ```light```|
-|```style.variables.primaryColor.value```|For defining the primary color used for buttons and links|```#ff854d```|all hex color values|
-|```style.variables.secondaryColor.value```|For defining the hover color and accent elements|```#ff854d```|all hex color values|
-|```style.data.buttonBorderRadius.value```|For defining the corner styles of buttons, cards and icons|```none```|```non```, ```rounded```, ```round```|
+| ```style.theme``` | For defining the base theme of the whole website and all content elements |```dark```|```dark```, ```light```|
+|```style.primaryColor```|For defining the primary color used for buttons and links|```#ff854d```|all hex color values|
+|```style.secondaryColor```|For defining the hover color and accent elements|```#ff854d```|all hex color values|
+|```style.buttonBorderRadius```|For defining the corner styles of buttons, cards and icons|```none```|```none```, ```rounded```, ```round```|
 |```style.font```|Font family for the headline font|Roboto Slab|...|
 |```style.copyFont```|Font family for the text font|Roboto|...|
 |```style.contentAlignment```|Defining the content alignment|```center```|```center```, ```left```|

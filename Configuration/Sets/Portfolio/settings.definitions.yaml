@@ -109,7 +109,6 @@ settings:
     enum:
       'center': 'Center'
       'left': 'Left'
-      'right': 'Right'
     default: 'center'
 
   # Features
