@@ -7,7 +7,7 @@
     <a href="/" class="header__logo">
         <f:if condition="{settings.logo.path}">
             <f:then>
-                <img src="{settings.logo.path}" alt="{site.configuration.websiteTitle}"/>
+                <img src="{f:uri.image(src: settings.logo.path)}" alt="{site.configuration.websiteTitle}"/>
             </f:then>
             <f:else>
                 {site.configuration.websiteTitle}
