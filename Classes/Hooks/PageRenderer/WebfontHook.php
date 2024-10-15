@@ -33,9 +33,6 @@ class WebfontHook
         $settings = $this->getSettings($GLOBALS['TYPO3_REQUEST']);
         $this->includeFont($settings['style']['font'], $pagerenderer);
         $this->includeFont($settings['style']['copyFont'], $pagerenderer);
-
-        $pagerenderer->addCssFile('EXT:theme_portfolio/Resources/Public/Fonts/roboto/webfont.css');
-        $pagerenderer->addCssFile('EXT:theme_portfolio/Resources/Public/Fonts/roboto-slab/webfont.css');
     }
 
     protected function includeFont($name, $pagerenderer)
