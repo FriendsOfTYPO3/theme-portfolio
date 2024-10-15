@@ -34,7 +34,7 @@ settings:
     description: 'Fileadmin path to the logo file'
     category: ThemePortfolio.logo
     type: string
-    default: 'EXT:theme_portfolio/Resources/Public/Images/logo.svg'
+    default: ''
 
   # Config
   config.projects.detailPid:
