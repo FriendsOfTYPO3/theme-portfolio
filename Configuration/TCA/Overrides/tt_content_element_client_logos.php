@@ -13,12 +13,11 @@ ExtensionManagementUtility::addTcaSelectItem(
         'description' => 'LLL:EXT:theme_portfolio/Resources/Private/Language/locallang_db.xlf:content_element.client_logos.description',
         'value' => 'client_logos',
         'icon' => 'icon_clients',
-        'group' => 'default',
+        'group' => 'portfolio',
     ],
     '--div--',
     'after'
 );
-
 
 $GLOBALS['TCA']['tt_content']['types']['client_logos'] = [
     'showitem' => '

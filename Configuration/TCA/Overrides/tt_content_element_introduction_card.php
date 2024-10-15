@@ -13,7 +13,7 @@ ExtensionManagementUtility::addTcaSelectItem(
         'description' => 'LLL:EXT:theme_portfolio/Resources/Private/Language/locallang_db.xlf:content_element.introduction_card.description',
         'value' => 'introduction_card',
         'icon' => 'icon_intro',
-        'group' => 'default',
+        'group' => 'portfolio',
     ],
     '--div--',
     'after'

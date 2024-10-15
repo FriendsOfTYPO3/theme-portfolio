@@ -3,6 +3,10 @@
 	<file source-language="en" datatype="plaintext" original="EXT:theme_portfolio/Resources/Private/Language/locallang_db.xlf" product-name="portfolio">
 		<header/>
 		<body>
+			<trans-unit id="theme_name" resname="theme_name" xml:space="preserve">
+				<source>Portfolio</source>
+			</trans-unit>
+
 			<trans-unit id="content_element.introduction_card" resname="content_element.introduction_card" xml:space="preserve">
 				<source>Introduction Card</source>
 			</trans-unit>

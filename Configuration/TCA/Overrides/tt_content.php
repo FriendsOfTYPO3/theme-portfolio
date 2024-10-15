@@ -1,6 +1,17 @@
 <?php
 
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
+
 defined('TYPO3') or die();
+
+ExtensionManagementUtility::addTcaSelectItemGroup(
+    'tt_content',
+    'CType',
+    'portfolio',
+    'LLL:EXT:theme_portfolio/Resources/Private/Language/locallang_db.xlf:theme_name',
+    'after:default'
+);
 
 $GLOBALS['TCA']['tt_content']['columns']['link'] = [
     'label' => 'LLL:EXT:theme_portfolio/Resources/Private/Language/locallang_db.xlf:field.link',
@@ -119,13 +130,11 @@ $GLOBALS['TCA']['tt_content']['palettes']['frames'] = array_replace_recursive(
     ]
 );
 
-call_user_func(static function () {
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-        'ThemePortfolio',
-        'Projects',
-        'LLL:EXT:theme_portfolio/Resources/Private/Language/locallang_db.xlf:content_element.themeportfolio_projects',
-        'icon_project',
-        'default',
-        'LLL:EXT:theme_portfolio/Resources/Private/Language/locallang_db.xlf:content_element.themeportfolio_projects.description',
-    );
-});
+ExtensionUtility::registerPlugin(
+    'ThemePortfolio',
+    'Projects',
+    'LLL:EXT:theme_portfolio/Resources/Private/Language/locallang_db.xlf:content_element.themeportfolio_projects',
+    'icon_project',
+    'portfolio',
+    'LLL:EXT:theme_portfolio/Resources/Private/Language/locallang_db.xlf:content_element.themeportfolio_projects.description',
+);

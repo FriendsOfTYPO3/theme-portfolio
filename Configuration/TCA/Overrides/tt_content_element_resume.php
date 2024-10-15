@@ -13,7 +13,7 @@ ExtensionManagementUtility::addTcaSelectItem(
         'description' => 'LLL:EXT:theme_portfolio/Resources/Private/Language/locallang_db.xlf:content_element.resume.description',
         'value' => 'resume',
         'icon' => 'icon_resume',
-        'group' => 'default',
+        'group' => 'portfolio',
     ],
     '--div--',
     'after'

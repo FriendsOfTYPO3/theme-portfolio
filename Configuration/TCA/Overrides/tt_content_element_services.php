@@ -14,7 +14,7 @@ ExtensionManagementUtility::addTcaSelectItem(
         'description' => 'LLL:EXT:theme_portfolio/Resources/Private/Language/locallang_db.xlf:content_element.services.description',
         'value' => 'services',
         'icon' => 'icon_services',
-        'group' => 'default',
+        'group' => 'portfolio',
     ],
     '--div--',
     'after'
