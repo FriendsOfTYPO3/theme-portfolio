@@ -137,20 +137,6 @@ settings:
     type: bool
     default: true
 
-  socials.showInHeader:
-    label: 'Enable Social Links in Header'
-    description: 'Enable social links in the Header'
-    category: ThemePortfolio.features
-    type: bool
-    default: true
-
-  socials.showActionButtons:
-    label: 'Enable Social Links as floating action buttons'
-    description: 'Enable social links as floating action buttons'
-    category: ThemePortfolio.features
-    type: bool
-    default: true
-
   # Social Media
   socials.channels.facebook.link:
     label: 'Facebook Link'
