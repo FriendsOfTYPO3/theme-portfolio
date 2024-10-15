@@ -2,14 +2,12 @@
 
 .button.button {
     $component: &;
-
     --text-color: var(--color-button-text);
     --button-bg-color: var(--color-primary);
     --button-hover-bg-color: var(--color-secondary);
     --font-size: #{$font-18};
     --padding: #{$size-8} #{$size-16};
     --radius: var(--button-border-radius);
-
     display: inline-block;
     cursor: pointer;
     border: none;

@@ -2,6 +2,7 @@
     @if (lightness( $color ) > 50) {
         @return var(--color-button-text-dark); // Lighter color, return black
     }
+
     @else {
         @return var(--color-button-text-light); // Darker color, return white
     }

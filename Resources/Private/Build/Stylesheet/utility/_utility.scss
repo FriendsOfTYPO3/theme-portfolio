@@ -6,7 +6,6 @@
         --bg-color: #{$color};
         background-color: var(--bg-color);
     }
-
     .text--#{$name} {
         --text-color: #{$color};
         color: var(--text-color);
@@ -14,7 +13,6 @@
 }
 
 // Positioning
-
 .text-center.text-center {
     text-align: center;
 }
@@ -51,7 +49,6 @@
 @include breakpoint-down(sm) {
     .xs-column-reverse.xs-column-reverse {
         display: flex;
-        flex-flow: column;
         flex-flow: column-reverse;
     }
 
@@ -65,7 +62,6 @@
 @include breakpoint-down(md) {
     .sm-column-reverse.sm-column-reverse {
         display: flex;
-        flex-flow: column;
         flex-flow: column-reverse;
     }
 
@@ -79,7 +75,6 @@
 @include breakpoint-down(lg) {
     .md-column-reverse.md-column-reverse {
         display: flex;
-        flex-flow: column;
         flex-flow: column-reverse;
     }
 
@@ -93,7 +88,6 @@
 @include breakpoint-down(xl) {
     .lg-column-reverse.lg-column-reverse {
         display: flex;
-        flex-flow: column;
         flex-flow: column-reverse;
     }
 
@@ -105,7 +99,6 @@
 }
 
 // Spacing
-
 .no-margin.no-margin {
     margin: 0;
 }
@@ -158,7 +151,6 @@
 }
 
 // object-fit
-
 @mixin ratio-paddings {
     &--auto {
         height: 100%;

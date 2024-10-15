@@ -9,6 +9,7 @@
         &__text,
         &__headline {
             margin-bottom: $size-12;
+
             @include last-no-margin('bottom');
         }
 

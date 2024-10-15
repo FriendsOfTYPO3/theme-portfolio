@@ -71,24 +71,19 @@
       .#{$name}-#{$i} {
         width: calc(100% / (#{$gridsize} / #{$i}));
       }
-
       .#{$name}-offset-#{$i} {
         margin-left: calc(100% / (#{$gridsize} / #{$i}));
       }
-
       .#{$name}-minus-offset-#{$i} {
         margin-left: calc(100% / (-1 * #{$gridsize} / #{$i}));
       }
     }
-
     .#{$name}-offset-0 {
       margin-left: 0;
     }
-
     .#{$name}-fifth {
       width: 20%;
     }
-
     .#{$name}-minus-offset-0 {
       margin-left: 0;
     }

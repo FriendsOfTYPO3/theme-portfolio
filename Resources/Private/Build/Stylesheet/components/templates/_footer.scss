@@ -1,28 +1,31 @@
 .footer{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: $size-4;
-  padding: $size-12;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: $size-4;
+    padding: $size-12;
 
-  @include breakpoint-up(md){
-    padding: $size-16;
-  }
-
-  &__menu{
-    .menu__list{
-      flex-wrap: wrap;
-      gap: 0;
-      li{
-        padding-right: $size-8;
-        border-right: $size-1 solid var(--color-base-text-secondary);
-        &:last-child{
-          border-right: none;
-        }
-        &:nth-child(n+2){
-          padding-left:$size-8;
-        }
-      }
+    @include breakpoint-up(md){
+        padding: $size-16;
     }
-  }
+
+    &__menu{
+        .menu__list{
+            flex-wrap: wrap;
+            gap: 0;
+
+            li {
+                padding-right: $size-8;
+                border-right: $size-1 solid var(--color-base-text-secondary);
+
+                &:last-child{
+                    border-right: none;
+                }
+
+                &:nth-child(n+2){
+                    padding-left:$size-8;
+                }
+            }
+        }
+    }
 }

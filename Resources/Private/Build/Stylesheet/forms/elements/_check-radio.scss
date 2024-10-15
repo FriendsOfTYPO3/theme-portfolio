@@ -1,5 +1,4 @@
-/* ====  Radio and Checkbox Input ==== */
-
+// Radio and Checkbox Input
 .radio-container .radio,
 .form-check {
     position: relative;
@@ -66,14 +65,14 @@
         background-color: var(--color-section-background-dark);
     }
 
-    &::after {
+    &:after {
         content: '';
         display: none;
         position: absolute;
     }
 }
 
-.checkmark::after {
+.checkmark:after {
     top: .2rem;
     left: .55rem;
     width: 0.5rem;
@@ -86,11 +85,8 @@
 .radiomark {
     border-radius: 50%;
 
-    &::after {
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
+    &:after {
+        inset: 0;
         width: .5rem;
         height: .5rem;
         margin: auto;
@@ -116,7 +112,7 @@ main {
             ~ .checkmark {
                 border-color: var(--color-primary);
 
-                &::after {
+                &:after {
                     display: block;
                 }
             }
@@ -126,7 +122,7 @@ main {
                 ~ .checkmark {
                     border-color: var(--color-primary);
 
-                    &::after {
+                    &:after {
                         display: block;
                     }
                 }

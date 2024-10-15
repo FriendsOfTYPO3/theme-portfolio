@@ -3,9 +3,11 @@
   text-decoration: none;
   color: var(--color-base-text-secondary);
   font-size: $font-18;
+
   &:hover{
     color: var(--color-secondary);
   }
+
   &.active{
     color: var(--color-secondary);
   }

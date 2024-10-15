@@ -1,6 +1,7 @@
 .ce-image {
     .image {
         margin-bottom: $size-24;
+
         @include last-no-margin('bottom');
     }
 
@@ -12,6 +13,7 @@
 
     .image {
         margin-bottom: $size-32;
+
         @include last-no-margin('bottom');
     }
 }

@@ -1,8 +1,6 @@
 @use "sass:map";
 @use "sass:math";
 
-/* ==== Mixins ==== */
-
 // Media Queries
 // min-width: @include breakpoint(md) {}
 // max-width: @include breakpoint-down(md) {}
@@ -19,7 +17,9 @@
             @content;
         }
         // If the breakpoint doesn't exist in the map.
-    } @else {
+    }
+
+ @else {
         // Log a warning.
         @warn "Invalid breakpoint: #{$breakpoint}.";
     }
@@ -36,7 +36,9 @@
             @content;
         }
         // If the breakpoint doesn't exist in the map.
-    } @else {
+    }
+
+ @else {
         // Log a warning.
         @warn "Invalid breakpoint: #{$breakpoint}.";
     }
@@ -55,7 +57,9 @@
         }
 
         // If one or both of the breakpoints don't exist.
-    } @else {
+    }
+
+ @else {
         // If lower breakpoint is invalid.
         @if (map.has-key($breakpoints, $lower) == false) {
             // Log a warning.
@@ -95,15 +99,21 @@
         &:last-child {
             margin-bottom: 0;
         }
-    } @else if $pos == 'left' {
+    }
+
+ @else if $pos == 'left' {
         &:last-child {
             margin-left: 0;
         }
-    } @else if $pos == 'top' {
+    }
+
+ @else if $pos == 'top' {
         &:last-child {
             margin-top: 0;
         }
-    } @else {
+    }
+
+ @else {
         &:last-child {
             margin-right: 0;
         }
@@ -115,15 +125,21 @@
         &:first-child {
             margin-bottom: 0;
         }
-    } @else if $pos == 'right' {
+    }
+
+ @else if $pos == 'right' {
         &:first-child {
             margin-right: 0;
         }
-    } @else if $pos == 'top' {
+    }
+
+ @else if $pos == 'top' {
         &:first-child {
             margin-top: 0;
         }
-    } @else {
+    }
+
+ @else {
         &:first-child {
             margin-left: 0;
         }
@@ -132,22 +148,17 @@
 
 @mixin position-absolute($width: 100%, $height: 100%, $top: 0, $bottom: auto, $left: 0, $right: auto, $z: -1) {
     position: absolute;
-    top: $top;
-    left: $left;
-    bottom: $bottom;
-    right: $right;
+    inset: $top $right $bottom $left;
     width: $width;
     height: $height;
     z-index: $z;
 }
 
-/*
-* Dynamic Clamp function
-* Example: font-size: clamped(16px, 18px);
-*/
-
+// Dynamic Clamp function
+// Example: font-size: clamped(16px, 18px);
 @function to-rems($px) {
     $rems: math.div($px, 10px) * 1rem;
+
     @return $rems;
 }
 
@@ -157,5 +168,6 @@
     $intercept-rems: to-rems($min-px - $slope * $min-bp);
     $min-rems: to-rems($min-px);
     $max-rems: to-rems($max-px);
+
     @return clamp(#{$min-rems}, #{$slope-vw}vw + #{$intercept-rems}, #{$max-rems});
 }

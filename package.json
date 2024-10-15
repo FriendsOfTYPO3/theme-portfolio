@@ -4,13 +4,19 @@
   "license": "GPL-2.0-or-later",
   "scripts": {
     "build": "npm run build:sass && npm run build:ts",
-    "build:sass": "sass ./Resources/Private/Build/Stylesheet/styles.scss:./Resources/Public/Stylesheet/styles.css --style expanded",
+    "build:sass": "sass ./Resources/Private/Build/Stylesheet/styles.scss:./Resources/Public/Stylesheet/styles.css --style expanded --no-source-map",
     "build:ts": "tsc",
+    "format:sass": "stylelint '**/*.scss' --fix",
     "watch:ts": "tsc --watch",
-    "watch:sass": "sass --watch ./Resources/Private/Build/Stylesheet/styles.scss:./Resources/Public/Stylesheet/styles.css --style expanded"
+    "watch:sass": "sass --watch ./Resources/Private/Build/Stylesheet/styles.scss:./Resources/Public/Stylesheet/styles.css --style expanded --no-source-map"
   },
   "devDependencies": {
+    "postcss-scss": "^4.0.9",
     "sass": "^1.79.5",
+    "stylelint": "^16.10.0",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-order": "^6.0.4",
+    "stylelint-scss": "^6.7.0",
     "typescript": "^5.6.3"
   }
 }

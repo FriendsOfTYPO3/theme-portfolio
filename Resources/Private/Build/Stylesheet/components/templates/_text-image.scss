@@ -1,6 +1,7 @@
 .ce-textpic {
     .image {
         margin-bottom: $size-24;
+
         @include last-no-margin('bottom');
     }
 
@@ -13,6 +14,7 @@
     @include breakpoint-up(md) {
         .image {
             margin-bottom: $size-32;
+
             @include last-no-margin('bottom');
         }
     }

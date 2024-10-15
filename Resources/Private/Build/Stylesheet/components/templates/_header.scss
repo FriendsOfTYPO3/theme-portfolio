@@ -1,123 +1,128 @@
 .languages {
-  display: none;
+    display: none;
 }
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  z-index: 100;
-  justify-content: space-between;
-  align-items: center;
-  gap: $size-4;
-  padding: $size-12;
-  border-bottom: $size-1 solid var(--color-base-text-secondary);
-  background-color: var(--color-base-background);
-
-  @include breakpoint-up(md) {
-    padding: $size-16;
-  }
-
-  &__logo{
-    color: var(--color-base-text-secondary);
-    text-decoration: none;
-    &:hover{
-      color: var(--color-secondary);
-    }
-
-    img {
-      max-width: 150px;
-      max-height: 80px;
-    }
-  }
-
-  &__menu {
-    @include breakpoint-down(md) {
-      position: absolute;
-      width: 100%;
-      top: 100%;
-      right: -100%;
-      visibility: hidden;
-      z-index: 9;
-      opacity: 0;
-      background-color: var(--color-primary);
-      transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-      .menu__list {
-        flex-direction: column;
-        gap: $size-4;
-      }
-      &.active {
-        right: 0;
-        opacity: 1;
-        visibility: visible;
-        transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
-      }
-
-      .menu-link{
-        padding: $size-12;
-        transition: all .3s ease-in-out;
-        &:hover{
-          background-color: var(--color-secondary);
-          color: var(--color-base-text-secondary);
-          transition: all .3s ease-in-out;
-        }
-      }
-    }
-
-
-    @include breakpoint-up(md) {
-      position: static;
-      visibility: visible;
-      opacity: 1;
-    }
-  }
-
-  &__mobile-burger {
-    position: relative;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    z-index: 100;
     justify-content: space-between;
-    gap: $size-2;
-    z-index: 10;
-    width: $size-24;
-    height: 1.8rem;
-    background-color: transparent;
-
-    span {
-      width: 100%;
-      height: $size-2;
-      background-color: var(--color-base-text);
-      transition: all .4s ease-in-out;
-    }
-
-    &.active {
-      span {
-        transform-origin: left;
-        transition: all .4s ease-in-out;
-
-        &:first-child {
-          transform: rotate(43deg);
-        }
-
-        &:nth-child(2) {
-          opacity: 0;
-          transition: all .4s ease-in-out;
-        }
-
-        &:last-child {
-          transform: rotate(-43deg);
-        }
-      }
-    }
+    align-items: center;
+    gap: $size-4;
+    padding: $size-12;
+    border-bottom: $size-1 solid color-mix(in srgb, var(--color-base-background), currentColor 15%);
+    background-color: var(--color-base-background);
 
     @include breakpoint-up(md) {
-      display: none;
+        padding: $size-16;
     }
 
-    &:hover {
-      cursor: pointer;
+    &__logo{
+        display: block;
+        color: var(--color-base-text-secondary);
+        text-decoration: none;
+
+        &:hover{
+            color: var(--color-secondary);
+        }
+
+        img {
+            display: block;
+            max-width: 150px;
+            max-height: 30px;
+        }
     }
-  }
+
+    &__menu {
+        @include breakpoint-down(md) {
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        right: -100%;
+        visibility: hidden;
+        z-index: 9;
+        opacity: 0;
+        background-color: var(--color-primary);
+        transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+
+        .menu__list {
+            flex-direction: column;
+            gap: $size-4;
+        }
+
+        &.active {
+            right: 0;
+            opacity: 1;
+            visibility: visible;
+            transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        }
+
+        .menu-link{
+            padding: $size-12;
+            transition: all .3s ease-in-out;
+
+            &:hover{
+            background-color: var(--color-secondary);
+            color: var(--color-base-text-secondary);
+            transition: all .3s ease-in-out;
+            }
+        }
+        }
+
+        @include breakpoint-up(md) {
+            position: static;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &__mobile-burger {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: $size-2;
+        z-index: 10;
+        width: $size-24;
+        height: 1.8rem;
+        background-color: transparent;
+
+        span {
+            width: 100%;
+            height: $size-2;
+            background-color: var(--color-base-text);
+            transition: all .4s ease-in-out;
+        }
+
+        &.active {
+        span {
+            transform-origin: left;
+            transition: all .4s ease-in-out;
+
+            &:first-child {
+            transform: rotate(43deg);
+            }
+
+            &:nth-child(2) {
+            opacity: 0;
+            transition: all .4s ease-in-out;
+            }
+
+            &:last-child {
+            transform: rotate(-43deg);
+            }
+        }
+        }
+
+        @include breakpoint-up(md) {
+            display: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
