@@ -30,6 +30,10 @@ class WebfontHook
             return;
         }
 
+        if (!in_array('friendsoftypo3/theme-portfolio', $GLOBALS['TYPO3_REQUEST']->getAttribute('site')->getSets())) {
+            return;
+        }
+
         $settings = $this->getSettings($GLOBALS['TYPO3_REQUEST']);
         $this->includeFont($settings['style']['font'], $pagerenderer);
         $this->includeFont($settings['style']['copyFont'], $pagerenderer);

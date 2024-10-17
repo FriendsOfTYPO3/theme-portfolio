@@ -29,6 +29,10 @@ class CustomStyleHook
             return;
         }
 
+        if (!in_array('friendsoftypo3/theme-portfolio', $GLOBALS['TYPO3_REQUEST']->getAttribute('site')->getSets())) {
+            return;
+        }
+
         $settings = $GLOBALS['TYPO3_REQUEST']->getAttribute('site')->getConfiguration()['settings'];
 
         $properties = [];
