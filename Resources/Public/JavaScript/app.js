@@ -1,15 +1,7 @@
 "use strict";
-function headerComponent() {
-    const header = document.querySelector('.header');
-    const headerMenuButtonToggle = header === null || header === void 0 ? void 0 : header.querySelector('.header__mobile-burger');
-    const headerNavigationContainer = header === null || header === void 0 ? void 0 : header.querySelector('.header__menu');
-    if (headerMenuButtonToggle) {
-        headerMenuButtonToggle.addEventListener('click', () => {
-            if (headerNavigationContainer) {
-                headerNavigationContainer.classList.toggle('active');
-                headerMenuButtonToggle.classList.toggle('active');
-            }
-        });
-    }
-}
-headerComponent();
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const menu_button_toggle_component_1 = __importDefault(require("./components/menu-button-toggle/menu-button-toggle.component"));
+new menu_button_toggle_component_1.default();
